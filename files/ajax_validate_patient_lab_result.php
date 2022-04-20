@@ -1,0 +1,29 @@
+<?php
+session_start();
+include("includes/connection.php");
+if (isset($_POST['Payment_Item_Cache_List_ID'])) {
+   $Payment_Item_Cache_List_ID=$_POST['Payment_Item_Cache_List_ID'];
+   $result_date=$_POST['result_date'];
+   $Employee_ID=$_SESSION['userinfo']['Employee_ID'];
+   $sql_update_validated_status_result=mysqli_query($conn,"UPDATE tbl_intergrated_lab_results SET validated='yes',validated_by='$Employee_ID' WHERE result_date='$result_date' AND sample_test_id='$Payment_Item_Cache_List_ID'") or die(mysqli_error($conn));
+
+   
+   //check if parameter exist
+   $sql_check_if_test_result=mysqli_query($conn,"SELECT ref_test_result_ID FROM tbl_tests_parameters_results WHERE ref_test_result_ID IN (SELECT test_result_ID FROM tbl_test_results WHERE payment_item_ID='$Payment_Item_Cache_List_ID')") or die(mysqli_error($conn));
+
+   if(mysqli_num_rows($sql_check_if_test_result)>0){
+       echo "update";
+       //update validate status
+       $sql_update_validate_status_for_this_page_result=mysqli_query($conn,"UPDATE tbl_tests_parameters_results SET Validated='Yes',ValidatedBy='$Employee_ID',TimeValidate=NOW(),Saved='Yes',SavedBy='$Employee_ID' WHERE ref_test_result_ID IN (SELECT test_result_ID FROM tbl_test_results WHERE payment_item_ID='$Payment_Item_Cache_List_ID')") or die(mysqli_error($conn));
+   }else{
+       echo "new";
+       //insert validate status
+       $test_result_ID_result=mysqli_query($conn,"SELECT test_result_ID FROM tbl_test_results WHERE payment_item_ID='$Payment_Item_Cache_List_ID'") or die(mysqli_error($conn));
+       $test_result_ID=mysqli_fetch_assoc($test_result_ID_result)['test_result_ID'];
+       
+       $ref_parameter_ID_result=mysqli_query($conn,"SELECT ref_parameter_ID FROM tbl_tests_parameters WHERE ref_item_ID IN(SELECT Item_ID FROM tbl_item_list_cache WHERE Payment_Item_Cache_List_ID='$Payment_Item_Cache_List_ID')") or die(mysqli_error($conn));
+       $ref_parameter_ID=mysqli_fetch_assoc($ref_parameter_ID_result)['ref_parameter_ID'];
+       
+       $sql_insert_validate_status_result=mysqli_query($conn,"INSERT INTO tbl_tests_parameters_results (ref_test_result_ID,parameter,Validated,ValidatedBy,TimeValidate,Saved,SavedBy) VALUES('$test_result_ID','$ref_parameter_ID','Yes','$Employee_ID',NOW()),'Yes','$Employee_ID'") or die(mysqli_error($conn));
+   }
+}

@@ -1,0 +1,2 @@
+once item is discontinued, it seems to be removed from the items list. what if an order comes
+asking to recontinue with the item? how do we manage that?

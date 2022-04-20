@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+    <head><!-- Created by GPITG LIMITED - DAR ES SALAAM, TANZANIA-->
+        <meta charset="utf-8">
+        <title>eHMS SYSTEM</title>
+        <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+        <link rel="stylesheet" type="text/css" href="AdminLTE.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/>
+        <link rel="shortcut icon" href="images/icon.png">
+
+        <link rel="stylesheet" href="style.css" media="screen">
+        <!-- New Date Picker -->
+        <link rel="stylesheet" href="pikaday.css">
+        <link type="text/css" rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css"/>
+        <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+
+        <link rel="stylesheet" href="style.responsive.css" media="all">
+        
+
+        <script src="jquery.js"></script>
+        <script src="script.js"></script>
+        <script src="script.responsive.js"></script>
+        <style>.art-content .art-postcontent-0 .layout-item-0 { margin-bottom: 10px;  }
+            .art-content .art-postcontent-0 .layout-item-1 { padding-right: 10px;padding-left: 10px;  }
+            .ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+            .ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+        </style>
+        <script src="jquery.maskedinput.js" type="text/javascript"></script>
+        <script>
+            jQuery(function ($) {
+                $("#Phone_Number").mask("+999 999 999 999");
+                $("#Phone_Number").focus();
+                $("#Member_Number").focus();
+                $("#Phone_Number").attr("placeholder", " e.g +255 753 xxx xxx");
+            });
+        </script>
+
+        <!--Script to timeout users-->
+        <script>
+            //var timer;
+            //var wait = 10*60*1000;
+            //$(document).ready(function(){   
+            //    timer = setTimeout(logout,wait);
+            //  });
+            //
+            //document.onkeypress=setTimeOut;
+            //document.onmousemove=setTimeOut;
+            //
+            //function setTimeOut()
+            //{
+            //    clearTimeout(timer);
+            //    timer=setTimeout(logout,wait);
+            //}
+            //function logout()
+            //{
+            //    window.location.href='logout.php';
+            //}
+        </script>
+
+
+
+
+        <script type="text/javascript">
+            function ConfirmLogout() {
+                //function to confirm users' action to logout
+                var logout = confirm("Are you  sure you want to logout?");
+                if (logout) {
+                    location.href = "logout.php";
+                    return true;
+                } else {
+                    location.href = "#";
+                    return false;
+                }
+            }
+        </script>
+        <script>
+            function checkout() {
+                if (confirm('Are you sure you want to checkout')) {
+                    $.ajax({
+                        type: 'POST',
+                        url: 'check_out.php',
+                        data: 'chkout=true',
+                        success: function (html) {
+                            if (parseInt(html) == 1) {
+                                document.location = '../index.php';
+                            }
+                        }, complete: function () {
+                        }, error: function (html, jjj) {
+                            //alert(html);
+                        }
+                    });
+                }
+            }
+        </script>
+
+        <!--    Datepicker script-->
+        <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.1.custom.min.css" />
+        <script src="js/jquery-1.9.1.js"></script>
+        <script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+        <script>
+            $(function () {
+                $("#date").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    showWeek: true,
+                    showOtherMonths: true,
+                    //buttonImageOnly: true, 
+                    //showOn: "both",
+                    dateFormat: "yy-mm-dd",
+                    //showAnim: "bounce"
+                });
+                $(".date").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    showWeek: true,
+                    showOtherMonths: true,
+                    //buttonImageOnly: true, 
+                    //showOn: "both",
+                    dateFormat: "yy-mm-dd",
+                    //showAnim: "bounce"
+                });
+
+            });
+        </script>
+
+        <!--    end of datepicker script-->
+
+        <!--    Datepicker script-->
+        <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.1.custom.min.css" />
+        <script src="js/jquery-1.9.1.js"></script>
+        <script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+        <script>
+            $(function () {
+                $("#date2").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    showWeek: true,
+                    showOtherMonths: true,
+                    //buttonImageOnly: true, 
+                    //showOn: "both",
+                    dateFormat: "yy-mm-dd",
+                    //showAnim: "bounce"
+                });
+
+                $("#date3").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    showWeek: true,
+                    showOtherMonths: true,
+                    //buttonImageOnly: true, 
+                    //showOn: "both",
+                    dateFormat: "yy-mm-dd",
+                    //showAnim: "bounce"
+                });
+
+                $("#date4").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    showWeek: true,
+                    showOtherMonths: true,
+                    //buttonImageOnly: true, 
+                    //showOn: "both",
+                    dateFormat: "yy-mm-dd",
+                    //showAnim: "bounce"
+                });
+
+            });
+        </script>
+         <style>
+            button{
+                color: #2E2E2E!important;
+                height:45px!important;
+                font-size: 14px;
+            }  
+        </style>
+        <!--    end of datepicker script-->
+    </head>
+
+    <body>
+                <script>
+              var user_session_control;
+            $(document).ready(function () {
+                user_session_control = setInterval(function () {
+                   // user_multiple_loged_in_control();
+                }, 60000);
+                // $.notifyBar({ cssClass: "success", html: "Your data has been changed!" }); 
+            });
+            function user_multiple_loged_in_control(){
+                var employee_session_id='2hvlp2l11loecur0lh0nrlur26';
+                var Employee_logedin_id='2712';
+                var employee_session_time='1547205419';
+
+                 $.ajax({
+                    type: 'GET',
+                    url: 'user_multiple_loged_in_control.php',
+                    data: {employee_session_id:employee_session_id,Employee_logedin_id:Employee_logedin_id,employee_session_time:employee_session_time},
+                    success: function (data) {
+                        console.log(data);
+                        if(data=="logout_this_user"){
+                            location.href = "logout.php";
+                        }
+                    }, complete: function (jqXHR, textStatus) {
+                    }, error: function (jqXHR, textStatus, errorThrown) {
+                       // alert(errorThrown);
+                    }
+                });
+            }
+        </script>
+        <div id="art-main">
+            <header class="art-header">
+
+                <h1 class="art-headline" data-left="1.14%">
+                    <a href="#">
+                        <b>Branch : </b>MAIN BRANCH  ~~~  <b>Department : </b>Doctor   ~~~  <b>Employee : </b>BMC System Administrator                    </a>
+                </h1>
+               
+                <div class="art-shapes">
+
+                    
+                </div>
+
+
+
+            </header>
+            <!--<nav class="art-nav">
+                <ul class="art-hmenu"></ul> 
+                </nav>-->
+            <div class="art-sheet clearfix">
+                <div class="art-layout-wrapper">
+                    <div class="art-content-layout">
+                        <div class="art-content-layout-row">
+                            <div class="art-layout-cell art-content"><article class="art-post art-article">    
+                                    <div class="art-postcontent art-postcontent-0 clearfix">
+                                        <div class="art-content-layout-wrapper layout-item-0">
+                                            <div class="art-content-layout">
+                                                                                                    <span><a href='./logout.php?emp_id=2712' class='art-button-green' id="ConfirmLogout" onclick='return ConfirmLogout()'>LOGOUT</a></span>
+                                                
+                                                 
+
+                                                                                                        <a href='index.php?Bashboard=BashboardThisPage' class='art-button-green'>
+                                                            DASHBOARD
+                                                        </a>
+                                                                                                                                                                <a href='setupandconfiguration.php?BackToSetupAndConfiguration=BackTosetupAndConfigurationThisPage' class='art-button-green'>
+                                                                SETUP & CONFIG
+                                                            </a>
+                                                        <style type="text/css">
+                                                    table,tr,td{
+                                                        border: solid 1px #ccc ! important;
+                                                    }
+                                                </style>
+                                                
+
+
+<!--    Datepicker script--
+    <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.1.custom.min.css" />
+    <script src="js/jquery-1.9.1.js"></script>
+   ---->
+    
+    
+<!--    end of datepicker script-->
+
+
+
+
+    <a href='./generalledgercenter.php?GeneralLedger=GeneralLedgerThisPage' class='art-button-green'>
+        BACK
+    </a>
+ 
+
+
+
+<br/><br/>
+<center>
+    
+Guarantor_Name	Registration_ID	Patient_Payment_ID	Amount	Patient_Name	Folio_Number	
+CASH-PRIVATE PATIENT	49486	401589	34000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	48177	401591	34000	kanisius kaspar ngatunga	50
+CASH-PRIVATE PATIENT	48252	401593	34000	John Malale Mlonga	660
+CASH-PRIVATE PATIENT	49642	401705	3200	Davis Lema Victor	487
+CASH-PRIVATE PATIENT	48177	401940	42000	kanisius kaspar ngatunga	0
+CASH-PRIVATE PATIENT	49642	401954	1000	Davis Lema Victor	487
+CASH-PRIVATE PATIENT	49486	402012	60000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	46804	402022	93000	Samwel Bisogila Kitula	0
+CASH-PRIVATE PATIENT	48207	402027	32000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	49642	402071	971100	Davis Lema Victor	487
+CASH-PRIVATE PATIENT	48252	402189	90000	John Malale Mlonga	660
+CASH-PRIVATE PATIENT	49486	402451	36700	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	48252	402456	36700	John Malale Mlonga	660
+CASH-PRIVATE PATIENT	48177	402472	33700	kanisius kaspar ngatunga	50
+CASH-PRIVATE PATIENT	46804	402475	33700	Samwel Bisogila Kitula	0
+CASH-PRIVATE PATIENT	50164	402790	30000	perpetua maiko kaluletwa	41
+CASH-PRIVATE PATIENT	50180	402854	90000	YASINTHA DIONIZ NYAKILIGE	1
+CASH-PRIVATE PATIENT	50178	402883	30000	kelvin blasius swai	46
+CASH-PRIVATE PATIENT	32249	403113	30000	Sophia David Nkya	401
+CASH-PRIVATE PATIENT	45399	403417	20000	SUBIRA LEUS KIBONA	67
+CASH-PRIVATE PATIENT	50268	403756	40000	MAGAIWA MARWA KICHOGO	2
+CASH-PRIVATE PATIENT	47473	403871	30000	Veronica Stephano Ludeha	763
+CASH-PRIVATE PATIENT	50164	403891	65000	perpetua maiko kaluletwa	41
+CASH-PRIVATE PATIENT	50273	404085	30000	Micah Andrew Ngussa	75
+CASH-PRIVATE PATIENT	49785	404121	30000	Shani Samweli Elias	539
+CASH-PRIVATE PATIENT	49723	404197	30000	SAJIDA SHARAD HIRIJI	524
+CASH-PRIVATE PATIENT	48207	404387	32000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	50273	404484	55000	Micah Andrew Ngussa	75
+CASH-PRIVATE PATIENT	50273	404488	45000	Micah Andrew Ngussa	75
+CASH-PRIVATE PATIENT	50273	404494	130000	Micah Andrew Ngussa	75
+CASH-PRIVATE PATIENT	50178	404671	45000	kelvin blasius swai	46
+CASH-PRIVATE PATIENT	50178	404674	32000	kelvin blasius swai	46
+CASH-PRIVATE PATIENT	50073	404930	41700	tondi michael manugwa	0
+CASH-PRIVATE PATIENT	10226	405006	30000	TEREZA WIKAMA KIHO	0
+CASH-PRIVATE PATIENT	32249	405009	30000	Sophia David Nkya	401
+CASH-PRIVATE PATIENT	32249	405023	96000	Sophia David Nkya	401
+CASH-PRIVATE PATIENT	48284	405149	30000	Zakayo Silvester Kalidushi	1132
+CASH-PRIVATE PATIENT	48207	405311	49000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	50164	405337	91000	perpetua maiko kaluletwa	41
+CASH-PRIVATE PATIENT	50057	405633	87000	Salumu Issah Yahaya	662
+CASH-PRIVATE PATIENT	46709	405681	130000	modesta meshack mashamba	494
+CASH-PRIVATE PATIENT	46007	405689	30000	Julius Mugibasha Kibisha	237
+CASH-PRIVATE PATIENT	50383	405699	30000	emmanuel magodi seme	150
+CASH-PRIVATE PATIENT	49486	406024	12000	Andrea Manongo Magesa	3
+CASH-PRIVATE PATIENT	50340	406259	35000	David Charles Nkwabi	126
+CASH-PRIVATE PATIENT	46804	406444	104400	Samwel Bisogila Kitula	0
+CASH-PRIVATE PATIENT	46007	406460	24000	Julius Mugibasha Kibisha	237
+CASH-PRIVATE PATIENT	48177	406463	46000	kanisius kaspar ngatunga	50
+CASH-PRIVATE PATIENT	46007	406468	91000	Julius Mugibasha Kibisha	237
+CASH-PRIVATE PATIENT	50073	406501	98500	tondi michael manugwa	0
+CASH-PRIVATE PATIENT	48252	406535	77500	John Malale Mlonga	660
+CASH-PRIVATE PATIENT	50432	406551	100000	taus kigunya	4
+CASH-PRIVATE PATIENT	50454	406558	100000	paskazia anthony	5
+CASH-PRIVATE PATIENT	50456	406569	100000	rose innocent	6
+CASH-PRIVATE PATIENT	41820	406714	30000	Benta Damian Sumba	482
+CASH-PRIVATE PATIENT	50273	406768	1000000	Micah Andrew Ngussa	179
+CASH-PRIVATE PATIENT	46804	406772	257100	Samwel Bisogila Kitula	0
+CASH-PRIVATE PATIENT	50057	406807	730000	Salumu Issah Yahaya	181
+CASH-PRIVATE PATIENT	50383	406839	45000	emmanuel magodi seme	150
+CASH-PRIVATE PATIENT	48177	406934	234200	kanisius kaspar ngatunga	0
+CASH-PRIVATE PATIENT	41820	407006	25000	Benta Damian Sumba	482
+CASH-PRIVATE PATIENT	50057	407033	32000	Salumu Issah Yahaya	662
+CASH-PRIVATE PATIENT	48252	407934	325200	John Malale Mlonga	660
+CASH-PRIVATE PATIENT	48207	408331	34000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	46105	408373	30000	Fredrick Kibwe Kibwe	186
+CASH-PRIVATE PATIENT	50600	408451	30000	zaina daimon mwaikambo	226
+CASH-PRIVATE PATIENT	50611	408536	30000	devotha mkama ezron	232
+CASH-PRIVATE PATIENT	50596	408615	30000	stadius biseko turubuza	234
+CASH-PRIVATE PATIENT	48252	408772	35000	John Malale Mlonga	0
+CASH-PRIVATE PATIENT	41785	409013	30000	Hassan Mkandala Salehe	461
+CASH-PRIVATE PATIENT	50057	409049	4000	Salumu Issah Yahaya	662
+CASH-PRIVATE PATIENT	20669	409126	30000	MACHANGO WAMBURA MANINGO	0
+CASH-PRIVATE PATIENT	50600	409146	12600	zaina daimon mwaikambo	226
+CASH-PRIVATE PATIENT	50073	409276	240200	tondi michael manugwa	0
+CASH-PRIVATE PATIENT	32249	409282	93900	Sophia David Nkya	401
+CASH-PRIVATE PATIENT	46105	409328	34500	Fredrick Kibwe Kibwe	186
+CASH-PRIVATE PATIENT	50596	409387	59000	stadius biseko turubuza	234
+CASH-PRIVATE PATIENT	32249	409598	185900	Sophia David Nkya	262
+CASH-PRIVATE PATIENT	32249	409616	92000	Sophia David Nkya	401
+CASH-PRIVATE PATIENT	50273	409962	21600	Micah Andrew Ngussa	75
+CASH-PRIVATE PATIENT	10422	410135	30000	TAJIRI MAULD MWINCHUMU	2
+CASH-PRIVATE PATIENT	50273	410213	154800	Micah Andrew Ngussa	75
+CASH-PRIVATE PATIENT	50734	410233	30000	Emmanuel Ephraim Stanley	289
+CASH-PRIVATE PATIENT	50734	410241	72000	Emmanuel Ephraim Stanley	7
+CASH-PRIVATE PATIENT	35788	410414	30000	Simon Elisha Lutambi	0
+CASH-PRIVATE PATIENT	48207	410433	34000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	11979	410461	30000	NTEMI MAKULA NDAKI	1205
+CASH-PRIVATE PATIENT	29838	410670	30000	Zelida Batakyaga . .	0
+CASH-PRIVATE PATIENT	50628	410695	100000	Sarah  Bhoke m	8
+CASH-PRIVATE PATIENT	50734	410706	5000	Emmanuel Ephraim Stanley	289
+CASH-PRIVATE PATIENT	43095	410888	30000	Benard Ngereza Kibunda	0
+CASH-PRIVATE PATIENT	50802	410979	30000	Yi Xiaoyan Wangli	314
+CASH-PRIVATE PATIENT	49486	411211	6500	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	50802	411220	16000	Yi Xiaoyan Wangli	314
+CASH-PRIVATE PATIENT	50802	411400	30000	Yi Xiaoyan Wangli	314
+CASH-PRIVATE PATIENT	46105	411535	320000	Fredrick Kibwe Kibwe	186
+CASH-PRIVATE PATIENT	50596	411541	90000	stadius biseko turubuza	234
+CASH-PRIVATE PATIENT	49486	411968	33000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	19270	412540	30000	Linear Henry Ntangeki	280
+CASH-PRIVATE PATIENT	48580	412612	30000	aman anini nkya	25
+CASH-PRIVATE PATIENT	48207	412750	34000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	47524	412995	30000	Zainabu Rajabu Sirati	0
+CASH-PRIVATE PATIENT	50057	413142	34000	Salumu Issah Yahaya	662
+CASH-PRIVATE PATIENT	40114	413217	30000	Farida Jafari Juma	0
+CASH-PRIVATE PATIENT	47473	413354	20000	Veronica Stephano Ludeha	763
+CASH-PRIVATE PATIENT	46105	413716	3000	Fredrick Kibwe Kibwe	0
+CASH-PRIVATE PATIENT	50991	413812	30000	zainab shabir daud	421
+CASH-PRIVATE PATIENT	50990	413816	30000	fatma ibrahim sokuuala	422
+CASH-PRIVATE PATIENT	50057	414409	39000	Salumu Issah Yahaya	662
+CASH-PRIVATE PATIENT	48207	414527	32000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	46105	414570	462000	Fredrick Kibwe Kibwe	186
+CASH-PRIVATE PATIENT	50057	415037	7000	Salumu Issah Yahaya	0
+CASH-PRIVATE PATIENT	50057	415458	34000	Salumu Issah Yahaya	662
+CASH-PRIVATE PATIENT	50057	415460	35000	Salumu Issah Yahaya	662
+CASH-PRIVATE PATIENT	50057	415479	35000	Salumu Issah Yahaya	662
+CASH-PRIVATE PATIENT	48207	415486	32000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	50057	415759	5000	Salumu Issah Yahaya	662
+CASH-PRIVATE PATIENT	48177	415798	30000	kanisius kaspar ngatunga	0
+CASH-PRIVATE PATIENT	50057	415828	113000	Salumu Issah Yahaya	0
+CASH-PRIVATE PATIENT	48177	415857	30000	kanisius kaspar ngatunga	0
+CASH-PRIVATE PATIENT	48177	415875	21400	kanisius kaspar ngatunga	0
+CASH-PRIVATE PATIENT	51121	415891	45000	yohana masunga masunga	9
+CASH-PRIVATE PATIENT	49486	416152	33000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	48207	416226	32000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	43682	416268	30000	Yustina Malimi Luguma	42
+CASH-PRIVATE PATIENT	51180	417026	30000	MNYASA JOHN KIRIMA	531
+CASH-PRIVATE PATIENT	45399	417108	20000	SUBIRA LEUS KIBONA	67
+CASH-PRIVATE PATIENT	50283	417312	30000	Laurencia Edward Mahuna	77
+CASH-PRIVATE PATIENT	42201	417718	30000	Pili Mohamed Kapela	0
+CASH-PRIVATE PATIENT	48207	418247	57000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	51061	418300	210000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	51061	418516	57500	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	49486	418589	33000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	48207	418627	7500	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	51061	418708	800	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	49486	418951	9000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	51367	419239	30000	joleen joseph barajingwa	613
+CASH-PRIVATE PATIENT	49234	419313	30000	Erasto Nhonge Nzumbi	336
+CASH-PRIVATE PATIENT	51400	419397	100000	flora sagame marere	10
+CASH-PRIVATE PATIENT	51398	419406	100000	rosemary  mato ongoro	11
+CASH-PRIVATE PATIENT	51396	419414	100000	prisca ghati odundu	12
+CASH-PRIVATE PATIENT	51391	419422	100000	irene godfrey ngowi	13
+CASH-PRIVATE PATIENT	45467	419634	30000	Olivary Amros Macha	1385
+CASH-PRIVATE PATIENT	48207	419773	47000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	51061	419952	1400	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	50990	420037	100000	fatma ibrahim sokuuala	14
+CASH-PRIVATE PATIENT	51061	420090	1500	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	48207	420341	7500	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	48207	420382	7500	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	49234	420679	66000	Erasto Nhonge Nzumbi	336
+CASH-PRIVATE PATIENT	48207	420946	800	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	49486	421045	33000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	22812	421220	30000	HAMIDU MUDRIKAT LUSENENE	370
+CASH-PRIVATE PATIENT	51061	421226	1800	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	38477	421305	30000	Simon Tarmo Akonaay	842
+CASH-PRIVATE PATIENT	50991	421696	30000	zainab shabir daud	421
+CASH-PRIVATE PATIENT	48207	421787	41500	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	48207	421794	15000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	43887	421840	30000	pendo minza ndulu	737
+CASH-PRIVATE PATIENT	40791	421909	30000	ISAYA SAMWEL MISALABA	94
+CASH-PRIVATE PATIENT	51573	421983	30000	Raghbir Singh Bhandazi Shdyaz Bhanduzi	700
+CASH-PRIVATE PATIENT	43745	422313	30000	Charles Lwitakubi Mazige	0
+CASH-PRIVATE PATIENT	51061	422381	32200	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	49486	422401	120000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	49486	422441	42500	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	51644	422496	30000	HELIMELINDA RUTASHOBYA BINAMUNGU	15
+CASH-PRIVATE PATIENT	40791	422583	33000	ISAYA SAMWEL MISALABA	94
+CASH-PRIVATE PATIENT	22812	422691	75000	HAMIDU MUDRIKAT LUSENENE	370
+CASH-PRIVATE PATIENT	51573	422841	100000	Raghbir Singh Bhandazi Shdyaz Bhanduzi	16
+CASH-PRIVATE PATIENT	48207	423343	295500	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	51061	423804	1000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	40791	423942	45000	ISAYA SAMWEL MISALABA	94
+CASH-PRIVATE PATIENT	51776	424506	30000	Christopher Kazoba Gashisha	795
+CASH-PRIVATE PATIENT	31019	424565	30000	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	51061	424743	800	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	43095	424793	30000	Benard Ngereza Kibunda	0
+CASH-PRIVATE PATIENT	49486	424877	140500	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	51776	424910	30000	Christopher Kazoba Gashisha	795
+CASH-PRIVATE PATIENT	51776	424923	32000	Christopher Kazoba Gashisha	795
+CASH-PRIVATE PATIENT	46228	424938	30000	maige charles bugenge	7
+CASH-PRIVATE PATIENT	49359	425056	30000	Janeth Nyamjungu Japhet	374
+CASH-PRIVATE PATIENT	51838	425396	250000	CYRIL MUSHI MUSHI	17
+CASH-PRIVATE PATIENT	41075	425400	30000	Glory Paul Mbwambo	6
+CASH-PRIVATE PATIENT	49359	425506	6000	Janeth Nyamjungu Japhet	374
+CASH-PRIVATE PATIENT	41094	425508	182000	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	46228	425578	160000	maige charles bugenge	7
+CASH-PRIVATE PATIENT	51061	426170	30400	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	22164	426279	30000	Pastory Alex Kaswilima	193
+CASH-PRIVATE PATIENT	51061	426326	90000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	51996	427587	100000	sayi kosmas madoshi	18
+CASH-PRIVATE PATIENT	51061	427597	43600	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	51061	428180	16000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	51061	428439	30000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	29838	428458	250000	Zelida Batakyaga . .	0
+CASH-PRIVATE PATIENT	52043	428541	30000	Brocklyn Peter Nyungu	925
+CASH-PRIVATE PATIENT	46771	428713	30000	Aines Said Kiura	523
+CASH-PRIVATE PATIENT	52065	428800	30000	habil johnson chaonda	930
+CASH-PRIVATE PATIENT	52060	428807	30000	Mariam Elias Kutamika	931
+CASH-PRIVATE PATIENT	29838	429111	800	Zelida Batakyaga . .	0
+CASH-PRIVATE PATIENT	29838	429113	30000	Zelida Batakyaga . .	0
+CASH-PRIVATE PATIENT	29838	429242	338000	Zelida Batakyaga . .	0
+CASH-PRIVATE PATIENT	31019	429279	700000	China Odongo Obweyo	950
+CASH-PRIVATE PATIENT	52065	429302	127000	habil johnson chaonda	930
+CASH-PRIVATE PATIENT	52060	429329	12000	Mariam Elias Kutamika	931
+CASH-PRIVATE PATIENT	51061	429354	5000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	31019	429568	33000	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	46228	429889	730000	maige charles bugenge	978
+CASH-PRIVATE PATIENT	46228	429966	32000	maige charles bugenge	978
+CASH-PRIVATE PATIENT	52132	430126	250000	Rhoda Mkama Katende	19
+CASH-PRIVATE PATIENT	41094	430205	30000	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	41094	430227	49000	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	41094	430230	4400	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	41094	430231	18000	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	31019	430235	15000	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	41094	430257	90000	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	46228	430289	200	maige charles bugenge	978
+CASH-PRIVATE PATIENT	41094	430331	33000	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	31019	430335	55200	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	39622	430592	30000	Elizabeth Mussa Monatha	1111
+CASH-PRIVATE PATIENT	52188	430990	30000	John Augustine Sando	1020
+CASH-PRIVATE PATIENT	45399	431544	20000	SUBIRA LEUS KIBONA	67
+CASH-PRIVATE PATIENT	47473	431832	30000	Veronica Stephano Ludeha	763
+CASH-PRIVATE PATIENT	50283	432127	73000	Laurencia Edward Mahuna	20
+CASH-PRIVATE PATIENT	52289	432347	30000	Anjelo Joseph Kingombe	1058
+CASH-PRIVATE PATIENT	52289	432493	10000	Anjelo Joseph Kingombe	1058
+CASH-PRIVATE PATIENT	52289	432619	19000	Anjelo Joseph Kingombe	1058
+CASH-PRIVATE PATIENT	46228	432721	7500	maige charles bugenge	978
+CASH-PRIVATE PATIENT	46228	432793	23000	maige charles bugenge	0
+CASH-PRIVATE PATIENT	46228	432835	35000	maige charles bugenge	978
+CASH-PRIVATE PATIENT	41094	432852	320000	Peter Philipo Malela	1083
+CASH-PRIVATE PATIENT	41094	432926	40000	Peter Philipo Malela	0
+CASH-PRIVATE PATIENT	50283	432956	280000	Laurencia Edward Mahuna	20
+CASH-PRIVATE PATIENT	46228	433019	800	maige charles bugenge	21
+CASH-PRIVATE PATIENT	46804	433176	30000	Samwel Bisogila Kitula	0
+CASH-PRIVATE PATIENT	11898	433688	30000	Maria Joseph Itengeja	112
+CASH-PRIVATE PATIENT	46228	434282	49000	maige charles bugenge	21
+CASH-PRIVATE PATIENT	50283	434324	31200	Laurencia Edward Mahuna	20
+CASH-PRIVATE PATIENT	52256	434383	30000	Rose Mkono Muniko	1036
+CASH-PRIVATE PATIENT	52299	434554	30000	Efrahim Moses Mpango	1060
+CASH-PRIVATE PATIENT	46105	434575	30000	Fredrick Kibwe Kibwe	186
+CASH-PRIVATE PATIENT	52403	434578	30000	wilson mwigamba chimama	1134
+CASH-PRIVATE PATIENT	51061	434749	47700	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	52457	434772	30000	abubakari salumu mkama	1141
+CASH-PRIVATE PATIENT	52289	434773	5000	Anjelo Joseph Kingombe	1058
+CASH-PRIVATE PATIENT	46228	434777	7500	maige charles bugenge	21
+CASH-PRIVATE PATIENT	45360	434779	30000	jacob kame madaha	0
+CASH-PRIVATE PATIENT	52299	435040	27000	Efrahim Moses Mpango	1060
+CASH-PRIVATE PATIENT	52299	435044	90000	Efrahim Moses Mpango	1060
+CASH-PRIVATE PATIENT	52188	435053	103000	John Augustine Sando	1020
+CASH-PRIVATE PATIENT	47512	435054	30000	Emanuela Yanga Makaga	22
+CASH-PRIVATE PATIENT	45360	435084	57000	jacob kame madaha	0
+CASH-PRIVATE PATIENT	52065	435133	89600	habil johnson chaonda	930
+CASH-PRIVATE PATIENT	50283	435163	60000	Laurencia Edward Mahuna	1158
+CASH-PRIVATE PATIENT	52256	435263	65000	Rose Mkono Muniko	1036
+CASH-PRIVATE PATIENT	52256	435267	119000	Rose Mkono Muniko	1036
+CASH-PRIVATE PATIENT	41094	435551	33900	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	31019	435611	33900	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	44740	435933	30000	ATHUMAN SALUM MAGANGA	0
+CASH-PRIVATE PATIENT	52566	436033	30000	MIRIAM JACOB AKIMO	22
+CASH-PRIVATE PATIENT	46228	436052	3000	maige charles bugenge	0
+CASH-PRIVATE PATIENT	52457	436171	23000	abubakari salumu mkama	1141
+CASH-PRIVATE PATIENT	52457	436179	35000	abubakari salumu mkama	1141
+CASH-PRIVATE PATIENT	46228	436286	49000	maige charles bugenge	21
+CASH-PRIVATE PATIENT	40791	436408	30000	ISAYA SAMWEL MISALABA	0
+CASH-PRIVATE PATIENT	51061	436735	800	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	31019	436821	7500	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	41094	436857	200	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	47458	436998	30000	RACHEL RICHARD MFANGAVO	758
+CASH-PRIVATE PATIENT	46228	437028	3500	maige charles bugenge	21
+CASH-PRIVATE PATIENT	52656	437119	100000	EMARIA D KIRUMBA	23
+CASH-PRIVATE PATIENT	46228	437339	31500	maige charles bugenge	0
+CASH-PRIVATE PATIENT	52586	437395	30000	Miguel Ezekiel William	1206
+CASH-PRIVATE PATIENT	40791	437444	30000	ISAYA SAMWEL MISALABA	0
+CASH-PRIVATE PATIENT	52676	437590	30000	mahssen seleman nasoro	24
+CASH-PRIVATE PATIENT	47458	437734	120000	RACHEL RICHARD MFANGAVO	758
+CASH-PRIVATE PATIENT	31019	438223	33300	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	41094	438415	40800	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	12031	438664	30000	JONES JOSIA GEOFREY	1234
+CASH-PRIVATE PATIENT	52256	438674	30000	Rose Mkono Muniko	1036
+CASH-PRIVATE PATIENT	40830	438805	30000	Malingwi Nyete Sonda	2
+CASH-PRIVATE PATIENT	16987	439073	30000	george onesmo makoye	0
+CASH-PRIVATE PATIENT	52797	439135	30000	happiness wambura chacha	25
+CASH-PRIVATE PATIENT	12031	439165	28000	JONES JOSIA GEOFREY	1234
+CASH-PRIVATE PATIENT	52256	439177	50000	Rose Mkono Muniko	1036
+CASH-PRIVATE PATIENT	35709	439226	30000	Esther Erasto Ntangi	1626
+CASH-PRIVATE PATIENT	17990	439333	30000	Regina Danmian Gervas	1290
+CASH-PRIVATE PATIENT	45812	439374	30000	Getruda Fredrick Kaboyoka	169
+CASH-PRIVATE PATIENT	16717	439383	30000	Samson Nghonzela Kilonja	1244
+CASH-PRIVATE PATIENT	52818	439412	30000	khairoon awadhi omar	26
+CASH-PRIVATE PATIENT	52719	439442	30000	Lydia Fanuel Fanuel	27
+CASH-PRIVATE PATIENT	51061	439517	54600	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	52814	439524	200000	Maria George Magembe	28
+CASH-PRIVATE PATIENT	52832	439585	100000	Daud  Masanja Nkwambi	29
+CASH-PRIVATE PATIENT	52719	439685	30000	Lydia Fanuel Fanuel	27
+CASH-PRIVATE PATIENT	52719	439699	19000	Lydia Fanuel Fanuel	27
+CASH-PRIVATE PATIENT	52818	439712	33000	khairoon awadhi omar	26
+CASH-PRIVATE PATIENT	52818	439715	45000	khairoon awadhi omar	26
+CASH-PRIVATE PATIENT	52797	439758	30000	happiness wambura chacha	25
+CASH-PRIVATE PATIENT	35709	439863	30000	Esther Erasto Ntangi	1626
+CASH-PRIVATE PATIENT	52814	440130	544800	Maria George Magembe	28
+CASH-PRIVATE PATIENT	52814	440171	12000	Maria George Magembe	0
+CASH-PRIVATE PATIENT	52814	440268	500000	Maria George Magembe	0
+CASH-PRIVATE PATIENT	41094	440454	30000	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	31019	440456	30000	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	23043	440649	200000	Zamdat Yusuph Seleman	1343
+CASH-PRIVATE PATIENT	31019	440759	3400	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	43421	440805	30000	ROSE JEREMIAH THOMAS	533
+CASH-PRIVATE PATIENT	49486	440833	30000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	52928	441096	30000	Ethan Malundwa Mhina	1364
+CASH-PRIVATE PATIENT	40830	441139	30000	Malingwi Nyete Sonda	2
+CASH-PRIVATE PATIENT	40830	441201	20000	Malingwi Nyete Sonda	2
+CASH-PRIVATE PATIENT	24792	441277	30000	Mohamed Ibrahimu Rusongoma	15
+CASH-PRIVATE PATIENT	48580	441461	30000	aman anini nkya	25
+CASH-PRIVATE PATIENT	23043	441622	280000	Zamdat Yusuph Seleman	1343
+CASH-PRIVATE PATIENT	49486	441624	77000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	31019	441864	15000	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	51061	441961	800	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	53003	441968	250000	michael rambakora rambakora	30
+CASH-PRIVATE PATIENT	51061	441985	800	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	52928	442092	500000	Ethan Malundwa Mhina	1364
+CASH-PRIVATE PATIENT	53003	442110	10000	michael rambakora rambakora	31
+CASH-PRIVATE PATIENT	52928	442351	1800	Ethan Malundwa Mhina	1364
+CASH-PRIVATE PATIENT	52928	442382	75000	Ethan Malundwa Mhina	32
+CASH-PRIVATE PATIENT	53030	442383	30000	Nuru Mohamed Hassan	1398
+CASH-PRIVATE PATIENT	52928	442391	25000	Ethan Malundwa Mhina	0
+CASH-PRIVATE PATIENT	53030	442533	30000	Nuru Mohamed Hassan	1398
+CASH-PRIVATE PATIENT	53030	442534	65000	Nuru Mohamed Hassan	1398
+CASH-PRIVATE PATIENT	53030	442703	88000	Nuru Mohamed Hassan	0
+CASH-PRIVATE PATIENT	49486	442746	39000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	36182	442769	30000	Nobel Joseph Mahende	66
+CASH-PRIVATE PATIENT	49486	442869	36100	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	36182	442971	4200	Nobel Joseph Mahende	66
+CASH-PRIVATE PATIENT	51061	443012	30400	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	49486	443043	34000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	41094	443074	40500	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	31019	443095	33000	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	51061	443449	30000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	23043	443546	89000	Zamdat Yusuph Seleman	1343
+CASH-PRIVATE PATIENT	49486	443780	20000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	52928	443800	1900	Ethan Malundwa Mhina	0
+CASH-PRIVATE PATIENT	41094	443843	19500	Peter Philipo Malela	0
+CASH-PRIVATE PATIENT	49486	443885	24000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	41094	444190	72600	Peter Philipo Malela	87
+CASH-PRIVATE PATIENT	52814	444297	350000	Maria George Magembe	0
+CASH-PRIVATE PATIENT	31019	444420	75000	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	49486	444576	42000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	52814	444600	633800	Maria George Magembe	0
+CASH-PRIVATE PATIENT	52928	444780	1300	Ethan Malundwa Mhina	0
+CASH-PRIVATE PATIENT	51061	444838	30000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	49486	444896	44300	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	52928	445107	90000	Ethan Malundwa Mhina	0
+CASH-PRIVATE PATIENT	52928	445138	7500	Ethan Malundwa Mhina	0
+CASH-PRIVATE PATIENT	12806	445234	30000	Esta T Masunga	1756
+CASH-PRIVATE PATIENT	33436	445291	30000	Mabagara Evarist Kurunalila	820
+CASH-PRIVATE PATIENT	53030	445328	25600	Nuru Mohamed Hassan	0
+CASH-PRIVATE PATIENT	53238	445496	30000	MWASITI NEJA ABDI	1532
+CASH-PRIVATE PATIENT	53250	445528	30000	Limi Nyanza Nkwabi	1534
+CASH-PRIVATE PATIENT	42766	445633	30000	Chacha Nyamhanga Chacha	0
+CASH-PRIVATE PATIENT	12972	445692	30000	Christina Mau Nyango	1875
+CASH-PRIVATE PATIENT	33436	446019	30000	Mabagara Evarist Kurunalila	820
+CASH-PRIVATE PATIENT	53030	446026	76000	Nuru Mohamed Hassan	33
+CASH-PRIVATE PATIENT	53030	446037	45000	Nuru Mohamed Hassan	34
+CASH-PRIVATE PATIENT	53030	446047	100000	Nuru Mohamed Hassan	35
+CASH-PRIVATE PATIENT	53281	446176	30000	JEREMIAH SAMWELI LUCHAGULA	1549
+CASH-PRIVATE PATIENT	12806	446210	123000	Esta T Masunga	1756
+CASH-PRIVATE PATIENT	45399	446448	20000	SUBIRA LEUS KIBONA	67
+CASH-PRIVATE PATIENT	51061	446530	32000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	49486	446625	30000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	31019	446633	30000	China Odongo Obweyo	38
+CASH-PRIVATE PATIENT	51061	446879	5000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	52928	446923	77000	Ethan Malundwa Mhina	0
+CASH-PRIVATE PATIENT	53281	446934	40000	JEREMIAH SAMWELI LUCHAGULA	1549
+CASH-PRIVATE PATIENT	53238	446942	50000	MWASITI NEJA ABDI	1532
+CASH-PRIVATE PATIENT	53030	447082	45000	Nuru Mohamed Hassan	36
+CASH-PRIVATE PATIENT	53030	447090	45000	Nuru Mohamed Hassan	37
+CASH-PRIVATE PATIENT	53030	447093	1000	Nuru Mohamed Hassan	0
+CASH-PRIVATE PATIENT	31019	447135	277800	China Odongo Obweyo	1589
+CASH-PRIVATE PATIENT	53030	447148	65000	Nuru Mohamed Hassan	38
+CASH-PRIVATE PATIENT	33436	447224	30000	Mabagara Evarist Kurunalila	820
+CASH-PRIVATE PATIENT	49486	447405	41600	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	52928	447422	7500	Ethan Malundwa Mhina	0
+CASH-PRIVATE PATIENT	53435	447851	30000	Mariam Said Salum	1623
+CASH-PRIVATE PATIENT	53476	448068	30000	neophiter pius rugaba	1633
+CASH-PRIVATE PATIENT	47072	448234	30000	Sharon Pius Bilalo	470
+CASH-PRIVATE PATIENT	53504	448458	30000	aisha ashraf ahmed	1650
+CASH-PRIVATE PATIENT	53494	448507	30000	Salama Jamal Salum	1653
+CASH-PRIVATE PATIENT	42118	448694	30000	Robert Masanja Willson	25
+CASH-PRIVATE PATIENT	50057	448956	30000	Salumu Issah Yahaya	0
+CASH-PRIVATE PATIENT	53547	448979	30000	paulina ladislaus mkenda	1666
+CASH-PRIVATE PATIENT	52928	449168	30000	Ethan Malundwa Mhina	0
+CASH-PRIVATE PATIENT	52928	449175	30000	Ethan Malundwa Mhina	0
+CASH-PRIVATE PATIENT	52928	449180	13800	Ethan Malundwa Mhina	0
+CASH-PRIVATE PATIENT	52928	449187	30000	Ethan Malundwa Mhina	0
+CASH-PRIVATE PATIENT	53030	449317	45000	Nuru Mohamed Hassan	38
+CASH-PRIVATE PATIENT	33436	449339	18000	Mabagara Evarist Kurunalila	820
+CASH-PRIVATE PATIENT	53578	449659	30000	BRAYAN JANUARY MWITA	1693
+CASH-PRIVATE PATIENT	53578	449823	101200	BRAYAN JANUARY MWITA	1693
+CASH-PRIVATE PATIENT	49486	450022	33000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	52457	450255	30000	abubakari salumu mkama	1141
+CASH-PRIVATE PATIENT	53651	450466	30000	Yasin Godwin Bandio	1727
+CASH-PRIVATE PATIENT	53250	450605	30000	Limi Nyanza Nkwabi	0
+CASH-PRIVATE PATIENT	53671	450743	300000	lucia shedrack shabani	39
+CASH-PRIVATE PATIENT	53663	451287	30000	Christopha Magige Lutiginga	1754
+CASH-PRIVATE PATIENT	53678	451350	30000	Emmanuel John Kinyemi	1757
+CASH-PRIVATE PATIENT	53725	451722	30000	rudia  mwengi kero	1765
+CASH-PRIVATE PATIENT	52457	451726	58000	abubakari salumu mkama	1141
+CASH-PRIVATE PATIENT	48782	451803	30000	matiko saggi nyabhagaka	122
+CASH-PRIVATE PATIENT	53678	451938	45000	Emmanuel John Kinyemi	1757
+CASH-PRIVATE PATIENT	51644	451992	30000	HELIMELINDA RUTASHOBYA BINAMUNGU	15
+CASH-PRIVATE PATIENT	51061	452017	30800	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	45054	452061	30000	Abdul Yusuph Ally	330
+CASH-PRIVATE PATIENT	45054	452299	45000	Abdul Yusuph Ally	330
+CASH-PRIVATE PATIENT	53663	452311	50000	Christopha Magige Lutiginga	1754
+CASH-PRIVATE PATIENT	53663	452323	90000	Christopha Magige Lutiginga	1754
+CASH-PRIVATE PATIENT	48782	452361	12000	matiko saggi nyabhagaka	122
+CASH-PRIVATE PATIENT	49486	452695	31900	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	51061	452737	30600	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	49486	452865	33000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	49486	452870	3000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	49486	452921	33000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	53802	453061	30000	Boniphance Sumuni Kungu	1813
+CASH-PRIVATE PATIENT	30870	453189	30000	Anisia Jonasi Iringa	103
+CASH-PRIVATE PATIENT	53663	453229	120000	Christopha Magige Lutiginga	1754
+CASH-PRIVATE PATIENT	53852	453384	55000	deus simeo simeo	40
+CASH-PRIVATE PATIENT	53030	453469	463000	Nuru Mohamed Hassan	0
+CASH-PRIVATE PATIENT	53855	453727	30000	gelda kanani milambo	1838
+CASH-PRIVATE PATIENT	53901	453926	30000	habiba hussein maulid	1843
+CASH-PRIVATE PATIENT	53905	454001	30000	magreth mbalu budodi	1848
+CASH-PRIVATE PATIENT	43847	454182	30000	Dalius Blauson Kabikabo	0
+CASH-PRIVATE PATIENT	53935	454195	30000	Grace Masanja Masele	1857
+CASH-PRIVATE PATIENT	53802	454224	39000	Boniphance Sumuni Kungu	1813
+CASH-PRIVATE PATIENT	53030	454241	615200	Nuru Mohamed Hassan	1860
+CASH-PRIVATE PATIENT	53725	454412	50000	rudia  mwengi kero	1765
+CASH-PRIVATE PATIENT	53901	454461	30000	habiba hussein maulid	1843
+CASH-PRIVATE PATIENT	53802	454469	120000	Boniphance Sumuni Kungu	1813
+CASH-PRIVATE PATIENT	53901	454475	4000	habiba hussein maulid	1843
+CASH-PRIVATE PATIENT	53905	454531	295000	magreth mbalu budodi	1848
+CASH-PRIVATE PATIENT	53851	454532	350000	Hassan Ahmada Mikidadi	41
+CASH-PRIVATE PATIENT	53905	454537	59000	magreth mbalu budodi	1848
+CASH-PRIVATE PATIENT	53951	454580	30000	Aziza Issa Mpinga	1868
+CASH-PRIVATE PATIENT	53945	454671	90000	naomi james masota	42
+CASH-PRIVATE PATIENT	53951	454809	43000	Aziza Issa Mpinga	1868
+CASH-PRIVATE PATIENT	53951	454810	250000	Aziza Issa Mpinga	1868
+CASH-PRIVATE PATIENT	53951	454901	84000	Aziza Issa Mpinga	1868
+CASH-PRIVATE PATIENT	49486	455196	40500	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	49936	455591	30000	EMMANUEL CALYST BAHATI	610
+CASH-PRIVATE PATIENT	53486	455725	30000	Juma Zabron Mnyeti	882
+CASH-PRIVATE PATIENT	54023	455727	30000	ROSEMARY BAHATI MASUMBUKO	1914
+CASH-PRIVATE PATIENT	54050	455983	30000	MAGRETH ELIAS ZUILI	1921
+CASH-PRIVATE PATIENT	53486	456171	150000	Juma Zabron Mnyeti	882
+CASH-PRIVATE PATIENT	54050	456245	16000	MAGRETH ELIAS ZUILI	1921
+CASH-PRIVATE PATIENT	54050	456256	30000	MAGRETH ELIAS ZUILI	1921
+CASH-PRIVATE PATIENT	54083	456394	100000	Eliva  Joseph Ezlon	43
+CASH-PRIVATE PATIENT	48011	456522	30000	Elizabeth Lisania Severe	1009
+CASH-PRIVATE PATIENT	46007	456702	30000	Julius Mugibasha Kibisha	237
+CASH-PRIVATE PATIENT	49486	456703	30000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	51061	456749	30000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	48207	456885	30000	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	53901	456962	4000	habiba hussein maulid	1843
+CASH-PRIVATE PATIENT	48207	457106	4200	Joseph Samwel Joseph	0
+CASH-PRIVATE PATIENT	53951	457146	130000	Aziza Issa Mpinga	1868
+CASH-PRIVATE PATIENT	53951	457159	9000	Aziza Issa Mpinga	1868
+CASH-PRIVATE PATIENT	54143	457562	30000	Sato Luhende Zacharia	1978
+CASH-PRIVATE PATIENT	51061	457638	30000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	54143	457679	93000	Sato Luhende Zacharia	1978
+CASH-PRIVATE PATIENT	54143	457680	300000	Sato Luhende Zacharia	1978
+CASH-PRIVATE PATIENT	54143	457681	6100	Sato Luhende Zacharia	1978
+CASH-PRIVATE PATIENT	54143	457876	23000	Sato Luhende Zacharia	1978
+CASH-PRIVATE PATIENT	53578	457989	30000	BRAYAN JANUARY MWITA	1693
+CASH-PRIVATE PATIENT	54189	458184	140000	SHINGENDI MANYILIZU KULIDWA	1997
+CASH-PRIVATE PATIENT	51061	458431	600	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	52299	458467	720000	Efrahim Moses Mpango	2010
+CASH-PRIVATE PATIENT	54023	458469	80000	ROSEMARY BAHATI MASUMBUKO	1914
+CASH-PRIVATE PATIENT	54217	458618	45000	Nyamtondo  Bwire Arufayo	44
+CASH-PRIVATE PATIENT	49486	458916	33000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	54246	459126	30000	fordia makene musobi	2040
+CASH-PRIVATE PATIENT	51061	459324	30000	Devis Zabron Itue	0
+CASH-PRIVATE PATIENT	52299	459512	22000	Efrahim Moses Mpango	45
+CASH-PRIVATE PATIENT	52299	459687	82600	Efrahim Moses Mpango	45
+CASH-PRIVATE PATIENT	49486	459776	33000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	54246	460198	50000	fordia makene musobi	46
+CASH-PRIVATE PATIENT	54328	460257	30000	Ezekiel Abel Rumigana	2095
+CASH-PRIVATE PATIENT	48011	460568	30000	Elizabeth Lisania Severe	1009
+CASH-PRIVATE PATIENT	52814	460716	30000	Maria George Magembe	0
+CASH-PRIVATE PATIENT	51573	460851	30000	Raghbir Singh Bhandazi Shdyaz Bhanduzi	16
+CASH-PRIVATE PATIENT	54431	461241	30000	joyce kaliho kago	2129
+CASH-PRIVATE PATIENT	49486	461352	27000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	54217	461537	100000	Nyamtondo  Bwire Arufayo	47
+CASH-PRIVATE PATIENT	53578	461561	180000	BRAYAN JANUARY MWITA	1693
+CASH-PRIVATE PATIENT	54456	461677	30000	Sophia Enock Shitobelo	2140
+CASH-PRIVATE PATIENT	54456	461766	56000	Sophia Enock Shitobelo	2140
+CASH-PRIVATE PATIENT	54456	461768	1900	Sophia Enock Shitobelo	2140
+CASH-PRIVATE PATIENT	54456	461780	60000	Sophia Enock Shitobelo	2140
+CASH-PRIVATE PATIENT	49486	461795	35000	Andrea Manongo Magesa	0
+CASH-PRIVATE PATIENT	54431	461858	38000	joyce kaliho kago	2129
+CASH-PRIVATE PATIENT	54431	461862	30000	joyce kaliho kago	2129
+CASH-PRIVATE PATIENT	54456	462004	18000	Sophia Enock Shitobelo	0
+CASH-PRIVATE PATIENT	41075	462013	200000	Glory Paul Mbwambo	2171
+CASH-PRIVATE PATIENT	52299	462016	150600	Efrahim Moses Mpango	45
+CASH-PRIVATE PATIENT	52299	462020	750000	Efrahim Moses Mpango	45
+CASH-PRIVATE PATIENT	54456	462063	24000	Sophia Enock Shitobelo	0
+CASH-PRIVATE PATIENT	51061	462145	30600	Devis Zabron Itue	0
+<form action='#' method='post' name='myForm' id='myForm' onsubmit="return validateForm();" enctype="multipart/form-data">
+    <table width=70%>
+        <tr>
+            <td style='text-align: center;'><b>From</b></td>
+            <td style='text-align: center;'><b>To</b></td>
+            <td style='text-align: center;'><b>Insurance</b></td>
+            <td><b>Patient Type</b></td>
+            <td><b>Payment Type</b></td>
+        </tr>
+        <tr>
+            <td><input type='text' name='Date_From' id='date_From_pc' required='required'></td> 
+            <td><input type='text' name='Date_To' id='date_To_pc' required='required'></td>
+            <td style='text-align: center;'>
+                <select name='Insurance' id='Insurance'>
+                    <option selected='selected'>All</option>
+                    <option>AUSDRIL-VIP</option><option>NSSF-PRIVATE</option><option>AMREF</option><option>SAUT STAFF-PRIVATE</option><option>STRATEGIS INSURANCE-VIP</option><option>NHIF</option><option>GEITA GOLD MINE(GGM)-VIP</option><option>METROPOLITAN TANZANIA</option><option>ELECT-BUGANDO</option><option>MAX INSURANCE-PRIVATE</option><option>JUBILEE INSURANCE-PRIVATE</option><option>CASH-PRIVATE PATIENT</option><option>AAR-PRIVATE</option><option>AAL(SGS)-PRIVATE</option><option>TANESCO REGINAL-PRIVATE</option><option>ARCHDIOCESE OF MWANZA</option><option>Special Exemption VIP</option><option>STRATEGIS INSURANCE-ULTRA VIP</option><option>MAKUBO (M.L ENTERPRISE)</option><option>MSALALA</option><option>SAUT STAFF-VIP</option><option>MILITARY HOSPITAL(MHM)-ULTRA VIP</option><option>RESOLUTION INSURANCE-ULTRA VIP</option><option>RESOLUTION INSURANCE-PRIVATE</option><option>DIOCESE OF KIGOMA </option><option>AUSDRIL-PRIVATE</option><option>SAUT STUDENT-VIP</option><option>TANESCO ZONAL-ULTRA VIP</option><option>TANESCO ZONAL-PRIVATE</option><option>TANESCO REGINAL-VIP</option><option>DIOCESE OF MPANDA </option><option>STH BUKOBA </option><option>PUMA</option><option>TRA -PRIVATE</option><option>CUHAS  BUGANDO </option><option>ST. BERNADETH SRS  RULENGE</option><option>Archdiocese of Tabora </option><option>DIOCESE OF KAHAMA </option><option>PERMANENT SECRETARY </option><option>GAPCO LTD</option><option>EMERGENCY PATIENT</option><option>MILITARY HOSPITAL(MHM)-VIP</option><option>MILITARY HOSPITAL(MHM)-PRIVATE</option><option>DIOCESE-ULTRA VIP</option><option>ORYX PRIVATE</option><option>DIOCESE OF BUKOBA</option><option>JUBILEE INSURANCE-VIP</option><option>BMC- STAFF</option><option>NSSF-ULTRA VIP</option><option>TANESCO REGINAL-UTRA VIP</option><option>BUTIMBA PRISON</option><option>CASH-VIP PATIENT</option><option>MAX INSURANCE-VIP</option><option>RESOLUTION INSURANCE-VIP</option><option>SAUT STUDENT-General</option><option>AAR-ULTRA VIP</option><option>RULENGE DIOCESE </option><option>SAUT STUDENT-ULTRA VIP</option><option>BMC-AIDS  RELIEF</option><option>AAR-VIP</option><option>DIOCESE-PRIVATE</option><option>DIOCESE-VIP</option><option>SAUT STAFF-ULTRA VIP</option><option>NSSF-VIP</option><option>GEITA GOLD MINE(GGM)-ULTRA VIP</option><option>MAX INSURANCE-ULTRA VIP</option><option>DIOCESE OF MUSOMA </option><option>DIOCESE OF GEITA </option><option>AAL(SGS)-VIP</option><option>AAL(SGS)-ULTRA VIP</option><option>GEITA GOLD MINE(GGM)-PRIVATE</option><option>TANESCO ZONAL-VIP</option><option>PPF PENSIONS FUND</option><option>JUBILEE INSURANCE-ULTRA VIP</option><option>MSAMAHA</option><option>IRC KIGOMA</option><option>STRATEGIS INSURANCE-PRIVATE</option><option>NORTH MARA GOLD MINE </option><option>CASH-ULTRA VIP PATIENT</option><option>DIOCESE OF SHINYANGA </option><option>CASH-PATIENT GRADE III</option><option>SAUT STUDENT-PRIVATE</option><option>Pharmacy Project Cash</option><option>Pharmacy Project Credit</option>                </select>
+            </td>
+            <td style='text-align: center;'>
+                <select name='Patient_Type' id='Patient_Type'>
+                    <option selected='selected'>All</option>
+                    <option>Outpatient</option>
+                    <option>Inpatient</option>
+                </select>
+            </td> 
+            <td style='text-align: center;'>
+                <select name='Payment_Type' id='Payment_Type'>
+                    <option selected='selected'>All</option>
+                    <option>Cash</option>
+                    <option>Credit</option>
+                </select>
+            </td>
+            <td style='text-align: center;'>
+                <input type='submit' name='Print_Filter' id='Print_Filter' class='art-button-green' value='FILTER'>
+            </td> 
+            <!-- EXCEL -->
+            <td style='text-align: center;'>
+                <input type='submit' name='excel' id='excel' class='art-button-green' value='DOWNLOAD EXCEL'>
+            </td> 
+            <!-- END EXCEL -->
+        </tr>
+    </table>
+    <table width=80%>
+        <tr>
+            <td colspan=7 style='text-align: center;'>
+			    </td>
+        </tr>
+        
+    </table>
+</center>
+<fieldset style='overflow-y:scroll; height:410px;'>  
+        <center>
+            <table width=100% border=1>
+                <tr>
+                    <td>
+					   <div id="timeRangeSummary" style="width:100%">
+					   
+					    </div>
+					</td>
+                </tr>
+            </table>
+        </center>
+</fieldset><br/></form>
+</div>
+</div>
+</div>
+
+
+</article></div>
+</div>
+</div>
+</div>
+</div>
+<footer class="art-footer">
+    <input type="hidden" value="" id="broadcastmsg" />
+    <input type="hidden" value="" id="notified" />
+    <div class="art-footer-inner">
+        <p><a href="http://www.gpitg.com/" target="_blank" title="GPITG LIMITED">GPITG LIMITED</a><span style="font-weight: bold;"></span> &copy; 2019. All Rights Reserved.</p>
+
+    </div>
+</footer>
+
+</div>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+<link rel="stylesheet" href="css/jquery.notifyBar.css" />
+<link rel="stylesheet" href="js/toastr/toastr.min.css" />
+<script src="js/jquery.notifyBar.js" ></script>
+<script src="js/toastr/toastr.min.js"  ></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/toastr/toastr.function.inc.js"  ></script>
+
+<link rel="stylesheet" href="css/select2.min.css" media="screen">
+<script src="js/select2.min.js"></script>
+<script>
+    var myVar;
+    
+    $(document).ready(function () {
+        myVar = setInterval(function () {
+            myTimer();
+        }, 15000);
+        
+        // $.notifyBar({ cssClass: "success", html: "Your data has been changed!" }); 
+    });
+    
+    function myTimer() {
+        $.ajax({
+            type: 'GET',
+            url: 'broadcastmsg.php',
+            data: 'action=read',
+            dataType: 'json',
+            success: function (result) {
+                var broadcastmsg = $('#broadcastmsg').val();
+                if (result.type != 'closed') {
+                    if (broadcastmsg != result.msg && result.msg != '') {
+                        $('#broadcastmsg').val(result.msg);
+                        $('#notified').val('0');
+                    }
+                } else {
+                    $('#broadcastmsg').val('');
+                }
+
+                if (broadcastmsg != '') {
+                    if ($('#notified').val() == '0') {
+                        $.notifyBar({cssClass: result.type, html: broadcastmsg, close: true, waitingForClose: true, closeOnClick: true});
+                        $('#notified').val('1');
+                    }
+                }
+
+            }, complete: function (jqXHR, textStatus) {
+            }, error: function (jqXHR, textStatus, errorThrown) {
+               // alert(errorThrown);
+            }
+        });
+    }
+
+    function myStopFunction() {
+        clearInterval(myVar);
+    }
+    function viewPatientPhoto(patient_id){
+                $.get("functions/getPatientPhoto.php",{patient_id:patient_id},function(data){
+                    $("<div></div>").dialog({
+                        title: 'Patient Photo',
+                        width: '400',
+                        height: '440',
+                        modal: true,
+                        resizable: false,
+                        buttons: [{
+                            text: 'Close',
+                            click: function(){
+                                $(this).dialog('close');
+                            }
+                        }],
+                    }).html(data);
+                });
+            }
+</script>
+<div id="status_gepg_hidden_block" class="hide"></div>
+<div id="control_no_gepg_hidden_block" class="hide"></div>
+<div id="payment_confirmation_gepg_hidden_block" class="hide"></div>
+<script>
+    function request_control_number_from_gepg(Registration_ID,total,Patient_Name,Check_In_Type,Payment_Cache_ID){
+            $("#gepg_progress_bar").show();
+           $.ajax({
+               type:'POST',
+               url:'ajax_government_payment_gateway.php',
+               data:{Amount_Required:total,Registration_ID:Registration_ID,Patient_Name:Patient_Name,Check_In_Type:Check_In_Type,Payment_Cache_ID:Payment_Cache_ID},
+               success:function (data){
+                   $("#status_gepg_hidden_block").html(data);
+                  var TrxStsCode=$('TrxStsCode').html();
+                  console.log("===>"+TrxStsCode);
+                  if(TrxStsCode=="7101"){
+                     $("#gepg_request_status").html("Successfull"); 
+                     $("#gepg_request_status").css("color","green"); 
+                  }else{
+                     $("#gepg_request_status").html("Fail"); 
+                     $("#gepg_request_status").css("color","red"); 
+                  }
+                   get_control_number_from_gepg(Payment_Cache_ID)
+                   console.log(data);
+                  // $("#gepg_progress_bar").hide();
+               }
+           });
+    }
+    function get_control_number_from_gepg(Payment_Cache_ID){
+        $.ajax({
+               type:'POST',
+               url:'ajax_get_control_number_from_gepg.php',
+               data:{Payment_Cache_ID:Payment_Cache_ID},
+               success:function (data){
+                   $("#control_no_gepg_hidden_block").html(data);
+                 var pay_cntr_num= $('pay_cntr_num').html();
+                 $("#control_number").html(pay_cntr_num);
+                   console.log(data);
+                   $("#gepg_progress_bar").hide();
+               }
+           });
+    }
+    function gepg_confirm_payment(Payment_Cache_ID,Check_In_Type,Registration_ID){
+        $("#gepg_progress_bar").show();
+        $.ajax({
+            type:'POST',
+            url:'ajax_gepg_confirm_payment.php',
+            data:{Payment_Cache_ID:Payment_Cache_ID},
+            success:function(data){
+                //alert(data);
+                $("#payment_confirmation_gepg_hidden_block").html(data);
+                if($('detail').html()=="Not found."){
+                    $("#gepg_payment_status").html("Payment Not Completed");
+                    $("#gepg_payment_status").css("color","red"); 
+                }else{
+                    if(parseInt($('paid_amt').html())>=parseInt($('bill_amt').html())){
+                       $("#gepg_payment_status").html("Payment Completed Successfully"); 
+                       $("#gepg_payment_status").css("color","green");
+                    }else{
+                       $("#gepg_payment_status").html("Payment Not Completed");
+                       $("#gepg_payment_status").css("color","red"); 
+                    }  
+                     
+                }
+                console.log(data);
+                $("#gepg_progress_bar").hide();
+            }
+        });
+    }
+    function gepg_complete_patient_payment(Payment_Cache_ID,Check_In_Type,Registration_ID){
+        $.ajax({
+            type:'POST',
+            url:'ajax_gepg_complete_patient_payment.php',
+            data:{Payment_Cache_ID:Payment_Cache_ID,Check_In_Type:Check_In_Type,Registration_ID:Registration_ID},
+            success:function(data){
+                
+            }
+        });
+    }
+</script>
+</body></html>
+
+<script>
+  $('#Print_Filter').click(function(e){
+   e.preventDefault();
+   var fromDate=$('#date_From_pc').val();
+   var toDate=$('#date_To_pc').val();
+   var Insurance=$('#Insurance').val();
+   var Patient_Type=$('#Patient_Type').val();
+   var Payment_Type=$('#Payment_Type').val();
+   $.ajax({
+        type:'POST', 
+        url:'Time_Range_Summary_report_Iframe.php',
+        data:'fromDate='+fromDate+'&toDate='+toDate+'&Insurance='+Insurance+'&Patient_Type='+Patient_Type+'&Payment_Type='+Payment_Type,
+        cache:false,
+        success:function(html){
+            $('#timeRangeSummary').html(html);
+        }
+     });
+   
+  });
+
+</script>
+
+
+<!-- EXCEL -->
+<script>
+  $('#excel1').click(function(){
+   e.preventDefault();
+   var fromDate=$('#date_From_pc').val();
+   var toDate=$('#date_To_pc').val();
+   var Insurance=$('#Insurance').val();
+   var Patient_Type=$('#Patient_Type').val();
+   var Payment_Type=$('#Payment_Type').val();
+
+//    alert('toDate='+toDate);
+   $.ajax({
+        type:'POST', 
+        url:'Time_Range_Summary_report_excel.php',
+        data:'fromDate='+fromDate+'&toDate='+toDate+'&Insurance='+Insurance+'&Patient_Type='+Patient_Type+'&Payment_Type='+Payment_Type,
+        cache:false,
+        success:function(html){
+            // $('#timeRangeSummary').html(html);
+            // alert('excel downloaded successfully'+html);
+        }
+     });
+   
+  });
+
+</script>
+<!-- END EXCEL -->
+
+
+    <script>
+        $(function () { 
+            $("#date_From_pc").datepicker({ 
+                changeMonth: true,
+                changeYear: true,
+                showWeek: true,
+                showOtherMonths: true,  
+                //buttonImageOnly: true, 
+                //showOn: "both",
+                dateFormat: "yy-mm-dd",
+                //showAnim: "bounce"
+            });
+            
+        });
+        
+        $(function () { 
+            $("#date_To_pc").datepicker({ 
+                changeMonth: true,
+                changeYear: true,
+                showWeek: true,
+                showOtherMonths: true,  
+                //buttonImageOnly: true, 
+                //showOn: "both",
+                dateFormat: "yy-mm-dd",
+                //showAnim: "bounce"
+            });
+            
+        });
+    </script>                

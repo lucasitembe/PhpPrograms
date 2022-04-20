@@ -1,0 +1,50 @@
+[08-Aug-2015 10:54:21 America/New_York] PHP Warning:  SoapServer::SoapServer(http://localhost:1339/wsdl/hospital.wsdl): failed to open stream: Connection refused in /home/gpitg/public_html/wsdlapi/adapter.php on line 38
+[08-Aug-2015 10:54:21 America/New_York] PHP Warning:  SoapServer::SoapServer(): I/O warning : failed to load external entity &quot;http://localhost:1339/wsdl/hospital.wsdl&quot; in /home/gpitg/public_html/wsdlapi/adapter.php on line 38
+[08-Aug-2015 10:54:21 America/New_York] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://localhost:1339/wsdl/hospital.wsdl' : failed to load external entity "http://localhost:1339/wsdl/hospital.wsdl"
+ in /home/gpitg/public_html/wsdlapi/adapter.php on line 38
+[08-Aug-2015 10:56:59 America/New_York] PHP Warning:  SoapServer::SoapServer(http://localhost:1339/wsdl/hospital.wsdl): failed to open stream: Connection refused in /home/gpitg/public_html/wsdlapi/adapter.php on line 38
+[08-Aug-2015 10:56:59 America/New_York] PHP Warning:  SoapServer::SoapServer(): I/O warning : failed to load external entity &quot;http://localhost:1339/wsdl/hospital.wsdl&quot; in /home/gpitg/public_html/wsdlapi/adapter.php on line 38
+[08-Aug-2015 10:56:59 America/New_York] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://localhost:1339/wsdl/hospital.wsdl' : failed to load external entity "http://localhost:1339/wsdl/hospital.wsdl"
+ in /home/gpitg/public_html/wsdlapi/adapter.php on line 38
+[08-Aug-2015 10:57:02 America/New_York] PHP Warning:  SoapServer::SoapServer(http://localhost:1339/wsdl/hospital.wsdl): failed to open stream: Connection refused in /home/gpitg/public_html/wsdlapi/adapter.php on line 38
+[08-Aug-2015 10:57:02 America/New_York] PHP Warning:  SoapServer::SoapServer(): I/O warning : failed to load external entity &quot;http://localhost:1339/wsdl/hospital.wsdl&quot; in /home/gpitg/public_html/wsdlapi/adapter.php on line 38
+[08-Aug-2015 10:57:02 America/New_York] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://localhost:1339/wsdl/hospital.wsdl' : failed to load external entity "http://localhost:1339/wsdl/hospital.wsdl"
+ in /home/gpitg/public_html/wsdlapi/adapter.php on line 38
+[08-Aug-2015 11:41:58 America/New_York] PHP Warning:  require_once(connection.php): failed to open stream: No such file or directory in /home/gpitg/public_html/wsdlapi/index.php on line 2
+[08-Aug-2015 11:41:58 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'connection.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gpitg/public_html/wsdlapi/index.php on line 2
+[08-Aug-2015 11:42:32 America/New_York] PHP Warning:  mysql_connect(): Access denied for user ''@'localhost' (using password: NO) in /home/gpitg/public_html/wsdlapi/classes/connection.php on line 35
+[08-Aug-2015 12:00:10 America/New_York] PHP Fatal error:  Class 'payments' not found in /home/gpitg/public_html/wsdlapi/index.php on line 4
+[08-Aug-2015 12:00:36 America/New_York] PHP Warning:  mysql_query() expects parameter 2 to be resource, boolean given in /home/gpitg/public_html/wsdlapi/classes/connection.php on line 32
+[08-Aug-2015 12:00:38 America/New_York] PHP Warning:  mysql_query() expects parameter 2 to be resource, boolean given in /home/gpitg/public_html/wsdlapi/classes/connection.php on line 32
+[08-Aug-2015 12:16:43 America/New_York] PHP Fatal error:  Call to a member function query() on a non-object in /home/gpitg/public_html/wsdlapi/classes/invoices.php on line 28
+[08-Aug-2015 13:15:23 America/New_York] PHP Warning:  define() expects at least 2 parameters, 1 given in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 6
+[08-Aug-2015 13:15:23 America/New_York] PHP Warning:  define() expects at least 2 parameters, 1 given in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 7
+[10-Aug-2015 06:33:07 America/New_York] PHP Fatal error:  Using $this when not in object context in /home/gpitg/public_html/wsdlapi/index.php on line 12
+[10-Aug-2015 06:33:49 America/New_York] PHP Fatal error:  Using $this when not in object context in /home/gpitg/public_html/wsdlapi/index.php on line 12
+[10-Aug-2015 06:37:22 America/New_York] PHP Fatal error:  Call to a member function getDetails() on a non-object in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 37
+[10-Aug-2015 06:50:04 America/New_York] PHP Fatal error:  Call to a member function get() on a non-object in /home/gpitg/public_html/wsdlapi/index.php on line 6
+[10-Aug-2015 06:50:36 America/New_York] PHP Warning:  Illegal string offset 'name' in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 31
+[10-Aug-2015 06:50:36 America/New_York] PHP Warning:  Illegal string offset 'regno' in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 32
+[10-Aug-2015 06:50:36 America/New_York] PHP Warning:  Illegal string offset 'amount' in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 33
+[10-Aug-2015 06:50:36 America/New_York] PHP Warning:  Illegal string offset 'invoice' in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 34
+[10-Aug-2015 06:50:36 America/New_York] PHP Warning:  Illegal string offset 'status' in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 35
+[10-Aug-2015 06:51:29 America/New_York] PHP Warning:  Illegal string offset 'name' in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 31
+[10-Aug-2015 06:51:29 America/New_York] PHP Warning:  Illegal string offset 'regno' in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 32
+[10-Aug-2015 06:51:29 America/New_York] PHP Warning:  Illegal string offset 'amount' in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 33
+[10-Aug-2015 06:51:29 America/New_York] PHP Warning:  Illegal string offset 'invoice' in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 34
+[10-Aug-2015 06:51:29 America/New_York] PHP Warning:  Illegal string offset 'status' in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 35
+[10-Aug-2015 09:48:24 America/New_York] PHP Fatal error:  SOAP-ERROR: Encoding: object has no 'status' property in /home/gpitg/public_html/wsdlapi/adapter.php on line 41
+[10-Aug-2015 09:49:30 America/New_York] PHP Fatal error:  SOAP-ERROR: Encoding: object has no 'status' property in /home/gpitg/public_html/wsdlapi/adapter.php on line 41
+[10-Aug-2015 09:49:52 America/New_York] PHP Fatal error:  SOAP-ERROR: Encoding: object has no 'status' property in /home/gpitg/public_html/wsdlapi/adapter.php on line 41
+[10-Aug-2015 10:10:09 America/New_York] PHP Fatal error:  SOAP-ERROR: Encoding: object has no 'status' property in /home/gpitg/public_html/wsdlapi/adapter.php on line 41
+[10-Aug-2015 10:10:32 America/New_York] PHP Fatal error:  SOAP-ERROR: Encoding: object has no 'status' property in /home/gpitg/public_html/wsdlapi/adapter.php on line 41
+[10-Aug-2015 10:11:58 America/New_York] PHP Fatal error:  SOAP-ERROR: Encoding: object has no 'status' property in /home/gpitg/public_html/wsdlapi/adapter.php on line 41
+[10-Aug-2015 10:29:45 America/New_York] PHP Fatal error:  SOAP-ERROR: Encoding: object has no 'status' property in /home/gpitg/public_html/wsdlapi/adapter.php on line 41
+[21-Aug-2015 07:55:23 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/gpitg/public_html/wsdlapi/classes/payments.php on line 56
+[21-Aug-2015 07:55:24 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/gpitg/public_html/wsdlapi/classes/payments.php on line 56
+[21-Aug-2015 07:55:29 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/gpitg/public_html/wsdlapi/classes/payments.php on line 56
+[21-Aug-2015 08:42:30 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/gpitg/public_html/wsdlapi/classes/payments.php on line 56
+[21-Aug-2015 08:42:31 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/gpitg/public_html/wsdlapi/classes/payments.php on line 56
+[22-Aug-2015 08:17:25 America/New_York] PHP Fatal error:  Using $this when not in object context in /home/gpitg/public_html/wsdlapi/index.php on line 9
+[22-Aug-2015 10:36:03 America/New_York] PHP Fatal error:  Call to undefined method connection::query_process() in /home/gpitg/public_html/wsdlapi/classes/ehms.php on line 47
+[25-Aug-2015 01:53:27 America/New_York] PHP Fatal error:  SOAP-ERROR: Encoding: object has no 'reference' property in /home/gpitg/public_html/wsdlapi/adapter.php on line 41

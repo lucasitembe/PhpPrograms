@@ -1,0 +1,103 @@
+tr:nth-child(even){
+	background-color: #C0C0C0;
+}
+
+tr:nth-child(odd){
+	background-color: #eeeeee;
+}
+
+#thead{
+	background-color: #555555;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+tr:nth-child(odd):hover, tr:nth-child(even):hover{
+	background-color: #777777;
+	cursor: pointer; 
+}
+
+#report{
+	border: collapse;
+	width: 75%;
+}
+
+#link{
+	/*display: block;*/
+}
+
+a{
+}
+
+a:active, a:link, a:visited{
+	color: #000000;
+}
+
+td, th{
+	text-align: left;
+	padding: 2px 4px;
+	font-size: 12px;
+}
+
+#thead td, #thead th{
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+a:hover{
+	color: #ff0000;
+}
+
+tr,td, table{
+	border: collapse;
+}
+
+td:first-child{
+	width: 150px;
+	text-align: center;
+}
+
+caption{
+	padding: 8px 4px;
+	border: 1px solid #666666;	
+	display: none;
+}
+
+legend{
+	text-align: center;
+	background-color: #777777;
+	width: 40%;
+}
+
+#overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	display: none;	
+	padding: 10px;
+	text-align: center;
+	background:rgba(25,25,25, 0.8);
+}
+
+#header h1{
+	text-align: center;
+}
+
+#data{
+	clear:right;
+	position: fixed;
+	top: 60px;
+	border: 5px solid #cccccc;
+	width: 80%;
+	left: 10%;
+	max-height: 550px;
+	overflow: scroll;
+	font-size: 24px;
+	color: #ffffff;
+}
+
+#data img{
+	padding: 10px 0px;
+}

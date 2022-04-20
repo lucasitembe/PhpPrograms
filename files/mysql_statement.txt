@@ -1,0 +1,9 @@
+ALTER TABLE `tbl_issuemanual_items` ADD `Buying_Price` DOUBLE NOT NULL DEFAULT '0' AFTER `Quantity_Issued`;
+
+ALTER TABLE `tbl_requisition_items` ADD `Last_Buying_Price` DOUBLE NOT NULL DEFAULT '0' AFTER `Quantity_Received`;
+
+ALTER TABLE `tbl_system_configuration` ADD `Allow_Pharmaceutical_Dispensing_Above_Actual_Balance` VARCHAR(5) NOT NULL DEFAULT 'yes' AFTER `Pharmacy_Patient_List_Displays_Only_Current_Checked_In`, ADD `All_Items_Payments` VARCHAR(5) NOT NULL DEFAULT 'no' AFTER `Allow_Pharmaceutical_Dispensing_Above_Actual_Balance`;
+
+ALTER TABLE `tbl_system_configuration` ADD `Allow_Aditional_Instructions_On_Pharmacy_Menu` VARCHAR(5) NOT NULL DEFAULT 'no' AFTER `Allow_Pharmaceutical_Dispensing_Above_Actual_Balance`;
+
+ALTER TABLE `tbl_system_configuration` ADD `Pharmacy_Additional_Instruction` VARCHAR(50) NULL AFTER `Tin`;

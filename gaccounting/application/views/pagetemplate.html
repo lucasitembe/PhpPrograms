@@ -1,0 +1,181 @@
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i><a href="index.html"> Home</a></li>
+                <li><i class="fa fa-laptop"></i> Dashboard</li>						  	
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Template table </h3>
+                </div>
+                <div class="panel-body">
+                    <!--                    <div id="shieldui-grid1"></div>-->
+                    <div class="table-responsive"> 
+                        <table class="table table-bordered  table-striped table-hover"> 
+                            <thead> 
+                                <tr> 
+                                    <th>#</th> 
+                                    <th>Table heading</th> 
+                                    <th>Table heading</th> 
+                                    <th>Table heading</th> 
+                                    <th>Table heading</th> 
+                                    <th>Table heading</th> 
+                                    <th>Table heading</th> 
+                                </tr> </thead> 
+                            <tbody> 
+                                <tr> 
+                                    <td >1</td> 
+                                    <td>Table cell</td>
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                </tr> 
+                                <tr>
+                                    <td >2</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                </tr> 
+                                <tr> 
+                                    <td >3</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                </tr> 
+                                <tr> 
+                                    <td >3</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                </tr> 
+                                <tr> 
+                                    <td >3</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                    <td>Table cell</td> 
+                                </tr> 
+                            </tbody> 
+                        </table> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Template form </h3>
+                </div>
+                <div class="panel-body">
+                    <form data-toggle="validator" role="form">
+                        <div class="form-group form-inline">
+                            <label for="inputName" class="control-label">Name</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Cina Saffary" required>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label for="inputTwitter" class="control-label">Twitter</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">@</span>
+                                <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="inputTwitter" placeholder="1000hz" required>
+                            </div>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors">Hey look, this one has feedback icons!</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="control-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="control-label">Password</label>
+                            <div class="form-inline row">
+                                <div class="form-group col-sm-6">
+                                    <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
+                                    <div class="help-block">Minimum of 6 characters</div>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="underwear" required>
+                                    Boxers
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="underwear" required>
+                                    Briefs
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+                                    Check yourself
+                                </label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#form').validator().on('submit', function (e) {
+                if (e.isDefaultPrevented()) {
+                    // handle the invalid form...
+                } else {
+                    // everything looks good!
+                }
+            });
+        });
+    </script>
+</div>
+
+
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div id="gender" class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                                    <input type="radio" name="gender" value="male"> &nbsp; Male &nbsp;
+                                                </label>
+                                                <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                                    <input type="radio" name="gender" value="female"> Female
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>

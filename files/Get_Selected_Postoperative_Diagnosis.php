@@ -1,0 +1,106 @@
+<?php
+	session_start();
+	include("./includes/connection.php");
+
+	if(isset($_SESSION['userinfo']['Employee_ID'])){
+        $Employee_ID = $_SESSION['userinfo']['Employee_ID'];
+    }else{
+        $Employee_ID = 0;
+    }
+	
+	if(isset($_GET['Disease_ID'])){
+		$Disease_ID = $_GET['Disease_ID']; //selected Disease_ID
+	}else{
+		$Disease_ID = '';
+	}
+
+	if(isset($_GET['Payment_Item_Cache_List_ID'])){
+		$Payment_Item_Cache_List_ID = $_GET['Payment_Item_Cache_List_ID'];
+	}else{
+		$Payment_Item_Cache_List_ID = '';
+	}
+
+	if(isset($_GET['Patient_Payment_Item_List_ID'])){
+		$Patient_Payment_Item_List_ID = $_GET['Patient_Payment_Item_List_ID'];
+	}else{
+		$Patient_Payment_Item_List_ID = 0;
+	}
+
+	if(isset($_GET['Registration_ID'])){
+		$Registration_ID = $_GET['Registration_ID'];
+	}else{
+		$Registration_ID = '';
+	}
+
+	if(isset($_GET['consultation_ID'])){
+		$consultation_ID = $_GET['consultation_ID'];
+	}else{
+		$consultation_ID = 0;
+	}
+    if($Employee_ID != '' && $Payment_Item_Cache_List_ID != ''){
+	    //check if data available into tbl_post_operative_notes
+	    $select = mysqli_query($conn,"select Post_operative_ID from tbl_post_operative_notes where Payment_Item_Cache_List_ID = '$Payment_Item_Cache_List_ID'") or die(mysqli_error($conn));
+	    $num = mysqli_num_rows($select);
+	    if($num > 0){
+	    	while ($data = mysqli_fetch_array($select)) {
+	    		$Post_operative_ID = $data['Post_operative_ID'];
+	    	}
+	    }else{
+	    	$insert = mysqli_query($conn,"insert into tbl_post_operative_notes(
+	    							Payment_Item_Cache_List_ID, Surgery_Date, Surgery_Date_Time, 
+	    							consultation_ID, Registration_ID, Employee_ID)
+	    							
+	    						values('$Payment_Item_Cache_List_ID',(select now()),(select now()),
+	    							'$consultation_ID','$Registration_ID','$Employee_ID')") or die(mysqli_error($conn));
+	    }
+
+	    //Select Post_operative_ID
+	    $select = mysqli_query($conn,"select Post_operative_ID from tbl_post_operative_notes where Payment_Item_Cache_List_ID = '$Payment_Item_Cache_List_ID'") or die(mysqli_error($conn));
+	    $num = mysqli_num_rows($select);
+	    if($num > 0){
+	    	while ($data = mysqli_fetch_array($select)) {
+	    		$Post_operative_ID = $data['Post_operative_ID'];
+	    	}
+	    }else{
+	    	$Post_operative_ID = 0;
+	    }
+
+	    //check if selected Disease_ID already added
+	    $check = mysqli_query($conn,"select Disease_ID, Post_operative_ID, Diagnosis_Type from tbl_post_operative_diagnosis where
+	    						Post_operative_ID = '$Post_operative_ID' and
+								Diagnosis_Type = 'Postoperative Diagnosis' and
+	    						Disease_ID = '$Disease_ID'") or die(mysqli_error($conn));
+	    $num_check = mysqli_num_rows($check);
+	    if($num_check < 1){
+	    	$add = mysqli_query($conn,"insert into tbl_post_operative_diagnosis(Disease_ID, Post_operative_ID, Diagnosis_Type)
+	    						values('$Disease_ID','$Post_operative_ID','Postoperative Diagnosis')") or die(mysqli_error($conn));
+	    	if($add){
+	    		$select = mysqli_query($conn,"select disease_name from tbl_disease d, tbl_post_operative_diagnosis pod where
+	    								d.Disease_ID = pod.Disease_ID and
+	    								pod.Post_operative_ID = '$Post_operative_ID' and
+	    								pod.Diagnosis_Type = 'Postoperative Diagnosis'") or die(mysqli_error($conn));
+	    		$nm = mysqli_num_rows($select);
+	    		if($nm > 0){
+	    			$values = '';
+	    			while ($row = mysqli_fetch_array($select)) {
+	    				$values.= ucwords(strtolower($row['disease_name'])).'; ';
+	    			}
+	    			echo $values;
+	    		}
+	    	}
+	    }else{
+			$select = mysqli_query($conn,"select disease_name from tbl_disease d, tbl_post_operative_diagnosis pod where
+    								d.Disease_ID = pod.Disease_ID and
+    								pod.Post_operative_ID = '$Post_operative_ID' and
+    								pod.Diagnosis_Type = 'Postoperative Diagnosis'") or die(mysqli_error($conn));
+    		$nm = mysqli_num_rows($select);
+    		if($nm > 0){
+    			$values = '';
+    			while ($row = mysqli_fetch_array($select)) {
+    				$values.= ucwords(strtolower($row['disease_name'])).'; ';
+    			}
+    			echo $values;
+    		}
+	    }
+	}
+?>

@@ -1,0 +1,356 @@
+#fetal_heart_rate_chart {
+    height: 250px !important;
+    margin: 15px auto;
+    width: 93vw !important;
+}
+
+#progress_of_labor_chart {
+    height: 480px;
+    margin: 15px auto;
+    width: 93vw !important;
+}
+
+.input-to-graph {
+    display: inline-block;
+}
+
+#table {
+    width: 90vw;
+    background: white;
+    float: left;
+    margin-left: 25px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, tr, td {
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+
+#table td {
+    width: 1.9%;
+}
+
+#table #time {
+    height: 20px;
+}
+
+#table-input {
+    background: #fff;
+    width: 20%;
+    margin-top: 20px;
+}
+
+#table-input td {
+    text-align: center !important;
+}
+
+#table-input td:hover {
+    background: grey;
+}
+
+.btn-inputl {
+    display: block;
+    height: 25px !important;
+    width: 60px !important;
+    background: #fff;
+}
+
+.btn-inputm {
+    display: block;
+    height: 25px !important;
+    width: 60px !important;
+    background: #fff;
+}
+
+.btn-input:hover {
+    background: grey;
+}
+
+.show-time {
+    text-align: center;
+}
+
+#remark td {
+    box-sizing: border-box;
+}
+
+#number-time {
+    float: left;
+    margin-left: 117px;
+}
+
+#table #moulding {
+    height: 20px !important;
+}
+
+#liqour_remark {
+    height: 20px !important;
+}
+
+#time td {
+    padding-left: -3;
+    border: none;
+}
+
+#number-time {
+    width: 84vw;
+}
+
+#number-time tr td {
+    border: none !important;
+    width: 2.7% !important;
+    box-sizing: border-box;
+    font-size: 10px;
+    text-align: left;
+}
+
+#number-time, tr {
+    border: none !important;
+}
+
+#time {
+    border: none !important;
+}
+
+#table {
+    width: 90vw;
+    background: white;
+    float: left;
+    margin-left: 25px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, tr, td {
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+
+#table td {
+    width: 1.9%;
+}
+
+#table #time {
+    height: 20px;
+}
+
+.number-time {
+    border-collapse: collapse;
+    border: none !important;
+    width: 90vw;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.number-time #time td {
+    border-collapse: collapse;
+    border: none !important;
+    width: 3%;
+}
+
+#number-time-side {
+    margin-left: 25px !important;
+}
+
+#table-input {
+    background: #fff;
+    width: 20%;
+    margin-top: 20px;
+}
+
+.image {
+    margin: 0px !important;
+    padding: 0px !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.image img {
+    padding: 0px;
+    margin: 0px;
+}
+
+#table .urine td {
+    width: 2%;
+}
+
+#table-input td {
+    text-align: center !important;
+}
+
+#table-input td:hover {
+    background: grey;
+}
+
+.btn-inputl {
+    display: block;
+    height: 25px !important;
+    width: 60px !important;
+    background: #fff;
+}
+
+.btn-inputm {
+    display: block;
+    height: 25px !important;
+    width: 60px !important;
+    background: #fff;
+}
+
+.btn-input:hover {
+    background: grey;
+}
+
+.show-time {
+    text-align: center;
+}
+
+#remark td {
+    box-sizing: border-box;
+}
+
+#number-time {
+    float: left;
+    margin-left: 119px;
+}
+
+.contraction #table {
+    height: 150px !important;
+    width: 90vw;
+}
+
+.contraction #table .tr td {
+    width: 2%;
+}
+
+.contraction #table {
+    height: 100px;
+    width: 90vw;
+}
+
+#number-timet {
+    width: 80vw;
+    margin-left: 141px;
+}
+
+#number-timet, #time {
+    border: none !important;
+}
+
+#number-timet #time td {
+    width: 4% !important;
+    text-align: center;
+    border: none !important;
+}
+
+#table #moulding {
+    height: 20px !important;
+}
+
+#liqour_remark {
+    height: 20px !important;
+}
+
+#time td {
+    padding-left: 0px;
+    border: none;
+}
+
+#number-time {
+    width: 84vw;
+}
+
+#number-time tr td {
+    border: none !important;
+    width: 2.7% !important;
+    box-sizing: border-box;
+    font-size: 10px;
+    text-align: left;
+}
+
+#number-time, tr {
+    border: none !important;
+}
+
+#time {
+    border: none !important;
+}
+
+#table .cell-width td {
+    width: 1.9%;
+}
+
+.arrange-table {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#side-number {
+    margin-top: 18px;
+    border-collapse: collapse;
+    border: none !important;
+}
+
+#side-number tr {
+    height: 27px !important;
+}
+
+.arrange-table #side-number tr td {
+    border-collapse: collapse;
+    border: none !important;
+    margin-left: 0px;
+    padding-left: 0px;
+    overflow: hidden;
+    box-sizing: border-box !important;
+}
+
+.arrange-table #table .tr td {
+    border-collapse: collapse;
+    border: none !important;
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 2% !important;
+    height: 3% !important;
+    box-sizing: border-box !important;
+    object-fit: td;
+}
+
+.arrange-table #table {
+    table-layout: fixed;
+}
+
+.medicine-name {
+    transform: rotate(-90deg);
+    text-align: center;
+}
+
+#med {
+    table-layout: fixed;
+}
+
+#med .td {
+    box-sizing: border-box !important;
+}
+
+table #medicine_number td {
+    border: none !important;
+    text-align: center;
+    background: none !important;
+    vertical-align: bottom;
+}
+
+table #medicine_number {
+    border: none !important;
+}
+
+.official_med_name option {
+    width: 400px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 25px;
+}

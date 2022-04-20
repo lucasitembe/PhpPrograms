@@ -1,0 +1,15 @@
+
+[2018-12-31 01:13:08]Query:=> <EpsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+    <header>
+        <clientId>888888</clientId>
+        <clientPassword>wUZ8ZL7Hsr+F2AMuyyzJlTk0VRF8fvPWGT+gqbOwMxg=</clientPassword>
+        <timestamp>20181228143755</timestamp>
+    </header>
+    <body>
+        <request>
+            <command>QueryBill</command>
+            <startDate>2018-12-29 07:00</startDate>
+            <endDate>2018-12-29 17:55</endDate>
+        </request>
+    </body>
+</EpsGateway>

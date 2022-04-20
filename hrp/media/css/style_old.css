@@ -1,0 +1,153 @@
+
+
+div.form_display{
+    border: 2px solid red;
+    width: 800px;
+}
+
+
+.error{
+	color:red;
+	width: auto;
+	font-family: aerial;
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	}
+        
+        
+        .view_data{
+            width: 900px;
+            overflow: scroll;
+            border: 1px solid #CCCCCC;
+         
+        } 
+       
+        
+        .view_data tr th{
+            text-align: left;
+            padding: 5px 0px 5px 5px;
+            background-color: #CCCCCC;
+            border-bottom: 1px solid black;
+            border-right: 1px solid #FFFFFF;
+        }
+        
+        .table_link{
+            color: blue;
+            cursor: pointer;
+        }
+        
+        .view_data tr td{
+            padding: 3px 0px 3px 5px;
+            margin: 0px;
+            border-bottom: 1px solid #CCCCCC;
+            border-right:  1px solid #CCCCCC;
+        }
+        
+       .even_tr{
+            background-color: #DDFFDD;
+        }
+        
+        .formdata{
+            width: 700px;
+            border: 1px solid #CCCCCC;
+        }
+        .formdata span{
+            color: red;
+        }
+        
+        .formdata-title{
+            background-color: #DFD7CF;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 5px 0px 5px 20px;
+            border-bottom: 1px solid #CCCCCC;
+        }
+        .formdata-content{
+            padding: 5px 0px 5px 10px;
+        }
+        .formdata input[type="text"],input[type="password"],select,textarea{
+            border: 2px solid #CCCCCC;
+            width: 200px;
+        }
+        
+        .formdata input[type="submit"]{
+            background-color: #999966;
+            padding: 5px 10px 5px 10px;
+            border:  1px solid #CCCCCC;
+            border-bottom:  2px solid black;
+        }
+        
+        div.subdata3 input[type="submit"]{
+            background-color: #999966;
+            padding: 5px 10px 5px 10px;
+            border:  1px solid #CCCCCC;
+            border-bottom:  2px solid black;
+        }
+        div.subdata3 input[type="button"]{
+            background-color: #999966;
+            padding: 5px 10px 5px 10px;
+            border:  1px solid #CCCCCC;
+            border-bottom:  2px solid black;
+        }
+        
+        
+        .sub3{
+            background-color: #999966;
+            padding: 5px 10px 5px 10px;
+            border:  1px solid #CCCCCC;
+            border-bottom:  2px solid black;
+        }
+        
+        .formdata input[type="button"]{
+            background-color: #999966;
+            padding: 5px 10px 5px 10px;
+            border:  1px solid #CCCCCC;
+            border-bottom:  2px solid black;
+        }
+        .formdata table tr td{
+            vertical-align: top;
+        }
+        .formdata textarea{
+            height: 50px;
+        }
+        .message{
+	width: 500px;
+	border:1px solid brown;
+	padding:3px 0px 3px 10px;
+	background-color: #FBE6F2;
+	margin-bottom: 10px;
+        color: green;
+	}
+        .formdata table tr.submit td{
+            padding-top: 10px;
+        }
+        .formdata table tr.submit td div{
+            
+            border-top: 1px solid #CCCCCC;
+            padding-top: 5px;
+        }
+        
+        .menu-data{
+            width: 100%;
+            
+        }
+        .menu-data tr td{
+            border: 1px solid #CCCCCC;
+            padding: 2px 0px 2px 5px;
+            background-color: #999966;
+            display: block;
+        }
+        .menu-data tr td:HOVER{
+            background-color: #126784;
+        }
+        .menu-data tr td a{
+         text-decoration: none;            
+         font-weight: bold;
+         display: block;
+         color: #FFFFFF;
+        }
+        .menu-data tr td a:hover{
+         text-decoration: none;            
+         font-weight: bold;
+        }

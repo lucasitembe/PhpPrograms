@@ -1,0 +1,58 @@
+table {font-size: 9pt; line-height: 1.2;
+       margin-top: 2pt; margin-bottom: 5pt;
+       border-collapse: collapse;  }
+
+thead {	font-weight: bold; vertical-align: bottom; }
+tfoot {	font-weight: bold; vertical-align: top; }
+thead td { font-weight: bold; }
+tfoot td { font-weight: bold; }
+
+thead td, thead th, tfoot td, tfoot th { font-variant: small-caps; }
+
+.headerrow td, .headerrow th { background-gradient: linear #b7cebd #f5f8f5 0 1 0 0.2;  }
+.footerrow td, .footerrow th { background-gradient: linear #b7cebd #f5f8f5 0 1 0 0.2;  }
+
+th {	font-weight: bold; 
+     vertical-align: top; 
+     text-align:left; 
+     padding-left: 2mm; 
+     padding-right: 2mm; 
+     padding-top: 0.5mm; 
+     padding-bottom: 0.5mm; 
+}
+
+td {	padding-left: 2mm; 
+     vertical-align: top; 
+     text-align:left; 
+     padding-right: 2mm; 
+     padding-top: 0.5mm; 
+     padding-bottom: 0.5mm;
+}
+table, tr, td {
+    border: 1px solid #CCC !important;
+
+}
+
+ .headerPage{
+        background-color: rgb(3, 125, 176);
+        color: white;
+        display: block;
+        width: 99.2%;
+        padding: 4px;
+        font-family: times;
+        font-size: large;
+        font-weight: bold;
+    }
+    
+  table.nobordertable tr{
+    border: 0 !important;
+  }
+  
+  table.nobordertable{
+    border: 0 !important;
+  }
+
+table.nobordertable td{
+    border: 0 !important;
+
+} 

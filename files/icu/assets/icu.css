@@ -1,0 +1,141 @@
+/*Navigation Header*/
+.header-item {
+    color: #e6f9ff !important;
+    text-shadow: 1px 1px #110101;
+    margin-right: 2px;
+    font-size: 1.25em;
+}
+
+/* Table helpers */
+/* Bootstrap align table cells middle */
+table.align-middle > tbody > tr > td {
+    vertical-align: middle;
+}
+
+/* Upright text */
+.upright {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+/* Hovering rows */
+.table-hover tr:hover {
+    background: #e1e1e1;
+    /*font-weight: 500;*/
+}
+
+.hover {
+    background: #e1e1e1 !important;
+}
+
+/* Button utilities*/
+a.button {
+    text-decoration: none;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.button {
+    background-color: #0079AE;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 3px;
+    /*font-weight: bold;*/
+    color: white;
+}
+
+.btn {
+    padding: 6px 18px;
+    border-radius: 2px;
+}
+
+.btn-sm {
+    padding: .25rem .5rem;
+}
+
+.btn-primary {
+    background-color: #2583af;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #044665;
+    border: none;
+}
+
+.btn-primary:active {
+    background-color: #044665;
+    border: none;
+}
+
+.btn-primary:focus {
+    background: #044665;
+    box-shadow: 0 0 0 0.25rem rgb(4 70 101 / 50%);
+    border: none;
+}
+
+.btn-primary:focus-visible {
+    background: #044665;
+    box-shadow: 0 0 0 0.25rem rgb(4 70 101 / 50%);
+    border: none;
+}
+
+.button-sm {
+    padding: 4px 18px;
+}
+
+.button:hover {
+    background-color: #044665;
+    color: #fff;
+}
+/* End button */
+
+/* Select2 */
+.select2-container--default .select2-selection--single {
+    border: 1px solid #ced4da !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 35px !important;
+}
+
+
+/* Other utilities */
+.index-1 {
+    z-index: 1 !important;
+}
+
+.bg-brand {
+    background: #2583af !important;
+}
+.bg-none {
+    background: none !important;
+}
+/* Large Menu Buttons */
+.menu-button {
+    width: 100%;
+    border: 1px solid #d3d3d3;
+    padding: 12px 0;
+    border-radius: 1px;
+    background-color: #fdfdfd;
+}
+
+.menu-button:hover {
+    background-color: #f3f3f3;
+}
+
+
+/* Prevent hovering table heads from appearing in-front of dialogs */
+.ui-dialog {
+    z-index: 10000;
+}
+
+/* Accordion Hovers, Form 6 & 7 */
+.accordion-button:hover {
+    background-color: #2583af3b;
+}
+
+/* Hide Menu on wPaint Form 4 */
+.wPaint-menu {
+    display: none !important;
+}

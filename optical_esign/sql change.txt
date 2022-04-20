@@ -1,0 +1,3 @@
+alter table tbl_patient_registration add patient_signature varchar(250) null;
+
+alter table tbl_employee add employee_signature varchar(250) null;

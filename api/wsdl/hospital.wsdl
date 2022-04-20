@@ -1,0 +1,93 @@
+<?xml version ="1.0" encoding="ISO-8859-1" ?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:adapter.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:adapter.php">
+    <types>
+        <xsd:schema targetNamespace="urn:adapter.php">
+        <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+        <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/"/>
+        <xsd:complexType name="validateInvoiceRequestMsg">
+            <xsd:sequence>
+                <xsd:element name="invoice" type="xsd:string"/>
+                <xsd:element name="source" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+        <xsd:complexType name="validateInvoiceResponseMsg">
+            <xsd:all>
+                <xsd:element name="name" type="xsd:string"/>
+                <xsd:element name="regno" type="xsd:string"/>
+                <xsd:element name="amount" type="xsd:string"/>
+                <xsd:element name="invoice" type="xsd:string"/>
+                <xsd:element name="status" type="xsd:string"/>
+                <xsd:element name="message" type="xsd:string"/>
+            </xsd:all>
+        </xsd:complexType>
+        <xsd:complexType name="postPaymentRequestMsg">
+            <xsd:sequence>
+                <xsd:element name="name" type="xsd:string"/>
+                <xsd:element name="invoice" type="xsd:string"/>
+                <xsd:element name="regno" type="xsd:string"/>
+                <xsd:element name="amount" type="xsd:string"/>
+                <xsd:element name="transRef" type="xsd:string"/>
+                <xsd:element name="transDate" type="xsd:string"/>
+                <xsd:element name="source" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+         <xsd:complexType name="postPaymentResponseMsg">
+            <xsd:all>
+                <xsd:element name="status" type="xsd:string"/>
+                <xsd:element name="message" type="xsd:string"/>
+                <xsd:element name="reference" type="xsd:string"/>
+            </xsd:all>
+        </xsd:complexType>
+        </xsd:schema>
+    </types>
+    <message name="validateInvoiceRequest">
+        <part name="return" type="tns:validateInvoiceRequestMsg" />
+    </message>
+    <message name="validateInvoiceResponse">
+        <part name="return" type="tns:validateInvoiceResponseMsg"/>
+    </message>
+    <message name="postPaymentRequest">
+        <part name="return" type="tns:postPaymentRequestMsg"/>
+    </message>
+    <message name="postPaymentResponse">
+        <part name="return" type="tns:postPaymentResponseMsg"/>
+    </message>
+    <portType name="adapterPortType">
+        <operation name="validateInvoice">
+            <documentation>Validate the customer invoice</documentation>
+            <input message="tns:validateInvoiceRequest"/>
+            <output message="tns:validateInvoiceResponse"/>
+        </operation>
+        <operation name="postPayment">
+            <documentation>Update the payment</documentation>
+            <input message="tns:postPaymentRequest"/>
+            <output message="tns:postPaymentResponse"/>
+        </operation>
+    </portType>
+    <binding name="adapterBinding" type="tns:adapterPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="validateInvoice">
+            <soap:operation soapAction="http://192.168.2.3/api/adapter.php/validateInvoice" style="rpc"/>
+            <input>
+                <soap:body use="encoded" namespace="urn:adapter.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </input>
+            <output>
+                <soap:body use="encoded" namespace="urn:adapter.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </output>
+        </operation>
+        <operation name="postPayment">
+            <soap:operation soapAction="http://192.168.2.3/api/adapter.php/postPayment" style="rpc"/>
+            <input>
+                <soap:body use="encoded" namespace="urn:adapter.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </input>
+            <output>
+                <soap:body use="encoded" namespace="urn:adapter.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="adapter">
+        <port name="adapterPort" binding="tns:adapterBinding">
+            <soap:address location="http://192.168.2.3/api/adapter.php"/>
+        </port>
+    </service>
+</definitions>

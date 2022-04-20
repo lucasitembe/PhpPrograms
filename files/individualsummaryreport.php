@@ -1,0 +1,262 @@
+<?php
+   include("./includes/connection.php");
+    @session_start();
+	 $htm= "";
+	?>
+
+<!DOCTYPE html >
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<title>EHMS SYSTEM:: PATIENT RECEIPT</title>
+	
+	<style>
+		body {
+
+			font-family:courier;
+                        font-size:12px; 
+                        font-weight:bold; 
+			
+		}
+		table{
+		  font-family:courier;
+		  font-weight: normal;
+          font-weight:600;
+		}
+		
+		
+		
+
+</style>
+</head>
+
+<body>
+    <div id="page-wrap"  style="font-weight:bold">
+	  
+		<div id="identity">
+		 <center>
+         <?php  include("./includes/reportheaderreceipt.php"); echo $htm; 
+		   $htm='';
+		 ?>
+          </center> 
+		<div style="clear:both"></div>
+		
+		<?php 
+if(isset($_GET['Patient_Payment_ID'])){
+        $Patient_Payment_ID = $_GET['Patient_Payment_ID'];
+    }else{
+        $Patient_Payment_ID = 0;
+    }
+    $total = 0;
+    
+    $datetime= mysqli_fetch_assoc(mysqli_query($conn,"SELECT NOW() AS TODAYD"))['TODAYD'];
+    //select printing date and time
+    
+
+            echo '<div id="customer" style="clear:both;">';
+            
+              
+    $select_Transaction_Items = mysqli_query($conn,
+            "select pp.Employee_ID,pp.Billing_Type,pp.Payment_Date_And_Time,preg.Patient_Name,preg.Registration_ID,preg.Old_Registration_Number from  tbl_patient_payment_item_list ppl INNER JOIN tbl_patient_payments pp ON pp.Patient_Payment_ID = ppl.Patient_Payment_ID
+                JOIN tbl_items t ON t.Item_ID = ppl.Item_ID
+                JOIN tbl_employee emp ON emp.Employee_ID = pp.Employee_ID
+                JOIN tbl_patient_registration preg ON preg.Registration_ID = pp.Registration_ID
+                where
+		    ppl.Patient_Payment_ID = '$Patient_Payment_ID' limit 1"); 
+			
+			
+   
+      echo '<table width="100%" border="0" cellpadding="0" cellspacing="0">';
+    while($row = mysqli_fetch_array($select_Transaction_Items)){
+       
+		//echo $row['Employee_ID'];exit;
+	echo '<tr><td colspan="5"><hr height="2px"></td></tr>'; 
+	//SELECT BILLING TYPE
+	if(strtolower($row['Billing_Type']) == 'outpatient cash' || strtolower($row['Billing_Type']) == 'inpatient cash'){
+	    $Billing_Type = 'Cash';
+	}elseif(strtolower($row['Billing_Type']) == 'outpatient credit'){
+	    $Billing_Type = 'Credit';
+	}
+	// Turn off all error reporting
+error_reporting(0);
+	//select the id of employee who made the transaction
+	$Employee_ID = $row['Employee_ID'];
+	$Payment_Date_And_Time = $row['Payment_Date_And_Time'];
+               echo ' <tr>
+                   
+                    <td>Name: '.$row['Patient_Name'].' </td></tr>';
+               echo '
+                    <tr>
+                      <td>
+                        Patient #: '.$row['Registration_ID'].' 
+                      </td>
+                       <td>
+                        Old #: '.$row['Old_Registration_Number'].' 
+                      </td>
+                      <tr>
+                      <td colspan="2">
+                        Receipt Number: '.$Patient_Payment_ID.' 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                         Mode: '.$row['Billing_Type'].' 
+                      </td>
+                    </tr>
+                    ';
+		  }
+         echo '</table>';
+		
+		echo '</div>';          
+		  $select_category = mysqli_query($conn,"select * from tbl_item_category") or die(mysqli_error($conn));
+		  
+		   $isReceipt=false;
+	$q=mysqli_query($conn,"SELECT * FROM tbl_printer_settings") or die(mysqli_error($conn));
+	 $row=mysqli_fetch_assoc($q);
+	 $exist=mysqli_num_rows($q);
+	if ($exist >0){
+	    $Paper_Type = $row['Paper_Type'];
+		if($Paper_Type=='Receipt'){
+		   $isReceipt=true;
+		}
+        
+	}
+		  
+$subtotal=0;$total=0;		
+//  while($rowCat = mysqli_fetch_array($select_category)){
+//       $catName=$rowCat['Item_Category_Name'];
+//	   $catID=$rowCat['Item_Category_ID'];
+$select_Transaction_Items = mysqli_query($conn,"select * from
+			    tbl_employee emp, tbl_patient_registration preg,
+				tbl_patient_payments pp, tbl_patient_payment_item_list ppl,
+				tbl_items t, tbl_item_subcategory ts, tbl_item_category ic
+				where emp.employee_id = pp.employee_id and
+				preg.registration_id = pp.registration_id and
+				pp.patient_payment_id = ppl.patient_payment_id and
+				t.item_id = ppl.item_id and
+				t.item_subcategory_id = ts.item_subcategory_id and
+				ts.item_category_id = ic.item_category_id and
+				pp.Patient_Payment_ID = '$Patient_Payment_ID'") or die(mysqli_error($conn)); 
+if($Billing_Type == 'Cash'){
+	if(mysqli_num_rows($select_Transaction_Items)>0){
+		    echo '<table id="items" width="100%" border="0" cellpadding="0" cellspacing="0">';
+		
+		  
+	   	    echo "<tr><td colspan='4'><hr height='3px'></td></tr>"; 
+		    echo '<tr>';
+                    echo "<th width='4%' style='text-align:left;'>Qty</th>";
+		    echo "<th style='text-align:center;'>Item</th>";
+		    echo  "<th style='text-align:right;'>Total</th>";
+		 echo "</tr>";
+         echo "<tr><td colspan='10'><hr height='3px'></td></tr>"; 
+		
+	 while($row = mysqli_fetch_array($select_Transaction_Items, MYSQL_BOTH)){
+		
+			echo '<tr class="item-row">';
+                         echo '<td class="qty" width="4%">'.$row['Quantity'].'</td>';
+			   if($isReceipt){
+				echo "<td class='description'>".substr($row['Product_Name'],0,16)." </td>";
+			   }else{
+				 echo "<td class='description'>".$row['Product_Name']." </td>";
+			   }
+				 //echo '<td class="description">'.$row['Product_Name'].'</td>';
+				 
+				  //echo '<td class="cost">'.$row['Price'].'</td>';
+				  
+				  echo '<td style="text-align:right;"><span class="price" >'.number_format(($row['Price'] - $row['Discount'])*$row['Quantity']);
+				  echo '</td>'
+                                  . '
+                                       </tr>';
+			  $subtotal = $subtotal + (($row['Price'] - $row['Discount'])*$row['Quantity']);
+				
+			 // $total = $total + (($row['Price'] - $row['Discount'])*$row['Quantity'])."</i>";
+		echo "<tr><td width='11px' height='4px'></td></tr>";
+		}
+		echo "</table>";
+		//echo "<tr><td colspan=6 style='text-align: right;'>Sub Total : ".number_format(($row['Price'] - $row['Discount'])*$row['Quantity']);"
+		
+	}
+}else{
+	echo '<center><h4><b>Invalid cash receipt <br/><b>Invalid cash receipt <br/><b>Invalid cash receipt <br/><b>Invalid cash receipt <br/>You are not allowed to print debit note</b></h4><center>';
+}
+		$htm='';
+     $total = $total + $subtotal;
+		$subtotal=0;	
+  //}
+    //  echo  "<tr><td style='text-align: right;' colspan=7><strong><u> TOTAL : ".number_format(($row['Price']-$row['Discount'])*$row['Quantity']);"</u></strong></td></tr>";
+	//echo "<hr/>";
+	
+	echo "<table width='100%' border='0' cellpadding='0' cellspacing='0'><tr><td colspan='4'><hr height='3px'></td></tr>";
+	echo  "<tr><td style='text-align: right;font-weight:bold;' colspan='4'><strong> TOTAL : ".number_format($total)."</strong></td></tr>";
+	echo "<tr><td colspan='4'><hr height='3px'></td></tr>";
+	// Turn off all error reporting
+error_reporting(0);
+		  
+		   //select the name of the employee who made the transaction based on employee id we got above
+    $select_Employee_Name = mysqli_query($conn,"select Employee_Name from tbl_employee where employee_id = '$Employee_ID'") or die(mysqli_error($conn));
+    while($row = mysqli_fetch_array($select_Employee_Name)){
+	$Employee_Name = $row['Employee_Name'];
+    }
+
+   echo '<tr class="enddesc"><td colspan="" width="25%" style="text-align:right;">Prepared By:</td><td colspan="3" style="text-align:left">&nbsp;&nbsp;'.$Employee_Name.' </td></tr>';
+   echo '<tr class="enddesc"><td colspan="" width="25%" style="text-align:right;">Date:</td><td colspan="3" style="text-align:left">&nbsp;&nbsp;'.$Payment_Date_And_Time.' </td></tr>';
+         	
+   
+   
+echo  '</table>';
+?>
+		
+	</div></div>
+<script>
+ window.print(false);
+ CheckWindowState();
+ // window.onafterprint = function(){
+   // window.close();
+// }
+
+ function PrintWindow() {                    
+       window.print();            
+       CheckWindowState();
+    }
+
+    function CheckWindowState()    {           
+        if(document.readyState=="complete") {
+            window.close(); 
+        } else {           
+            setTimeout("CheckWindowState()", 2000);
+        }
+    }
+//  //window.onfocus=function(){ window.close();}
+//// (function() {
+////
+////    var beforePrint = function() {
+////        console.log('Functionality to run before printing.');
+////    };
+////
+//    var afterPrint = function() {
+//        console.log('Functionality to run after printing');
+//    };
+//
+//    if (window.matchMedia) {
+//        var mediaQueryList = window.matchMedia('print');
+//        mediaQueryList.addListener(function(mql) {
+//            if (mql.matches) {
+//                beforePrint();
+//            } else {
+//                afterPrint();
+//            }
+//        });
+//    }
+//
+//    window.onbeforeprint = beforePrint;
+//    window.onafterprint = afterPrint;
+//
+//}());
+ </script>
+
+ 	
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<?php
+include './includes/constants.php';
+include("./includes/connection.php");
+include("./includes/connection_epayment.php");
+include("./includes/header.php");
+$controlforminput = '';
+if (!isset($_SESSION['userinfo'])) {
+    @session_destroy();
+    header("Location: ../index.php?InvalidPrivilege=yes");
+}
+
+if (isset($_GET['Section'])) {
+    $Section = $_GET['Section'];
+} else {
+    $Section = '';
+}
+?>
+<a href='epaymentcollectionrevenuecenter.php' class='art-button-green'>
+   ePAYMENT
+</a>
+<?php
+if (isset($_SESSION['userinfo'])) {
+    if (strtolower($Section) == 'revenue') {
+        echo "<a href='paymentsallitems.php?PaymentsAllItems=PaymentsAllItemsThisForm' class='art-button-green'>BACK</a>";
+    } else if (strtolower($Section) == 'departmental') {
+        if (isset($_GET['olc']) && $_GET['olc'] == 'Pharmacy') {
+            echo "<a href='pharmacyworkspage.php?section=Pharmacy&PharmacyWorks=PharmacyWorksThisPage' class='art-button-green'>BACK</a>";
+        } else {
+            echo "<a href='departmentpatientbillingpage.php?DepartmentPatientBilling=DepartmentPatientBillingThisPage' class='art-button-green'>BACK</a>";
+        }
+    } else if (strtolower($Section) == 'reception') {
+        echo "<a href='visitorform.php?VisitorForm=VisitorFormThisPage' class='art-button-green'>BACK</a>";
+    } else {
+        echo "<a href='#setupandconfiguration.php?BackToSetupAndConfiguration=BackTosetupAndConfigurationThisPage' class='art-button-green'>BACK</a>";
+    }
+}
+?>
+<br/><br/>
+
+<?php
+if (isset($_SESSION['Transaction_ID'])) {
+    $Transaction_ID = $_SESSION['Transaction_ID'];
+} else {
+    $Transaction_ID = 0;
+}
+
+$pay_code = '';
+
+$epaycode = '';
+
+//echo $Transaction_ID;
+//get patient details
+/* $select = mysqli_query($conn,"select pr.Registration_ID, Patient_Name, Payment_Code, Guarantor_Name, Amount_Required, pr.Phone_Number from 
+  tbl_bank_transaction_cache tc, tbl_sponsor sp, tbl_patient_registration pr where
+  tc.Registration_ID = pr.Registration_ID and
+  pr.Sponsor_ID = sp.Sponsor_ID and
+  Transaction_ID = '$Transaction_ID'") or die(mysqli_error($conn)); */
+
+$select = mysqli_query($conn,"select pr.Registration_ID, bt.Payment_Code, bt.Amount_Required,Guarantor_Name, bt.Employee_ID, bt.Transaction_Status, bt.Transaction_ID,
+							bt.Transaction_Date_Time, bt.Transaction_Date, pr.Patient_Name, pr.Date_Of_Birth, pr.Gender, pr.Phone_Number, pr.Registration_Date_And_Time
+							from tbl_bank_transaction_cache bt,  tbl_sponsor sp, tbl_patient_registration pr where
+							pr.Registration_ID = bt.Registration_ID and
+                            pr.Sponsor_ID = sp.Sponsor_ID and
+							Transaction_ID = '$Transaction_ID' ") or die(mysqli_error($conn));
+$num = mysqli_num_rows($select);
+
+$remoteTransID = 0;
+
+if ($num > 0) {
+    while ($data = mysqli_fetch_array($select)) {
+        $Transaction_ID = $data['Transaction_ID'];
+        $Registration_ID = $data['Registration_ID'];
+        $Payment_Code = $data['Payment_Code'];
+        $Amount_Required = $data['Amount_Required'];
+        $Employee_ID = $data['Employee_ID'];
+        $Transaction_Date_Time = $data['Transaction_Date_Time'];
+        $Transaction_Date = $data['Transaction_Date'];
+        $Transaction_Status = $data['Transaction_Status'];
+        $Patient_Name = $data['Patient_Name'];
+        $Date_Of_Birth = $data['Date_Of_Birth'];
+        $Gender = $data['Gender'];
+        $Phone_Number = $data['Phone_Number'];
+        $Registration_Date_And_Time = $data['Registration_Date_And_Time'];
+        $Guarantor_Name = $data['Guarantor_Name'];
+
+        $epaycode = $Payment_Code;
+
+        if ($Transaction_Status == 'pending') {
+            $sql_epay = "insert into tbl_bank_transaction_cache(P_Name, Registration_ID, Payment_Code, 
+										Amount_Required, Employee_ID, Transaction_Date_Time, 
+										Transaction_Date, Transaction_Status, Phone_Number)
+										values('$Patient_Name','$Registration_ID','$Payment_Code',
+												'$Amount_Required','$Employee_ID','$Transaction_Date_Time',
+												'$Transaction_Date','$Transaction_Status','$Phone_Number')";
+
+            if (saveInfo($sql_epay)) {
+
+                $results = mysqli_query($conn,"update tbl_bank_transaction_cache set Transaction_Status = 'uploaded' where Transaction_ID = '$Transaction_ID'") or die(mysqli_error($conn));
+
+                $pay_code = $Payment_Code;
+
+                $sqlTrans = "SELECT Transaction_ID FROM tbl_bank_transaction_cache ORDER BY Transaction_ID DESC LIMIT 1";
+                $rs = getRecord($sqlTrans)[0];
+                $remoteTransID = $rs['Transaction_ID'];
+            } else {
+                die("An error has occured");
+            }
+        }
+    }
+} else {
+    $Patient_Name = '';
+    $Payment_Code = '';
+    $Guarantor_Name = '';
+    $Amount_Required = '';
+    $Phone_Number = '';
+    $Registration_ID = '';
+}
+?>
+<fieldset>  <br/>
+    <legend align=right><b>ePayment Transaction Details</b></legend>
+    <center><br/><br/><br/>
+        <table width = 70%>
+            <tr>
+                <td width="20%" style="text-align: right;">Patient Name</td>
+                <td><input type="text" value="<?php echo $Patient_Name; ?>" readonly="readonly"></td>
+                <td width="20%" style="text-align: right;">Sponsor Name</td>
+                <td><input type="text" value="<?php echo $Guarantor_Name; ?>" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">Registration Number</td>
+                <td><input type="text" value="<?php echo $Registration_ID; ?>" readonly="readonly"></td>
+                <td style="text-align: right;">Phone Number</td>
+                <td><input type="text" value="<?php echo $Phone_Number; ?>" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">Amount Required</td>
+                <td><input type="text" value="<?php echo number_format($Amount_Required); ?>" readonly="readonly"></td>
+                <td style="text-align: right;">Bill Number</td>
+                <td><input type="text" value="<?php echo $Payment_Code; ?>" readonly="readonly"></td>
+            </tr>
+        </table><br/><br/>
+        <table width="70%">
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <input type="button" value="RE-SYNCHRONIZE" class="art-button-green" onclick="sync_epayments('<?php echo EPAY_SERVER_URL; ?>', '<?php echo $remoteTransID; ?>')">&nbsp;&nbsp;
+                    <input type="button" value="PRINT INVOICE" class="art-button-green" onclick="Print_Payment_Code('<?php echo $Payment_Code; ?>', '<?php echo $Transaction_ID; ?>')">&nbsp;&nbsp;
+                    <input type="button" value="SEND SMS" class="art-button-green">
+                    <input type="button" value="PRINT ePAYMENT RECEIPT" onclick="print_epayment('<?php echo $epaycode ?>', 0)" class="art-button-green">
+                    <input type="button" class="art-button-green" value="PRINT DETAIL RECEIPT" onclick="Print_Receipt_Payment('<?php echo $Payment_Code ?>')">
+
+                </td>
+            </tr>
+        </table>
+    </center><br/><br/><br/>
+</fieldset>
+
+<script type="text/javascript">
+    function Print_Payment_Code(Payment_Code) {
+        var winClose = popupwindow('paymentcodepreview.php?Payment_Code=' + Payment_Code + '&PaymentCodePreview=PaymentCodePreviewThisPage', 'INVOICE NUMBER', 530, 400);
+    }
+
+    function popupwindow(url, title, w, h) {
+        var wLeft = window.screenLeft ? window.screenLeft : window.screenX;
+        var wTop = window.screenTop ? window.screenTop : window.screenY;
+
+        var left = wLeft + (window.innerWidth / 2) - (w / 2);
+        var top = wTop + (window.innerHeight / 2) - (h / 2);
+        var mypopupWindow = window.showModalDialog(url, title, 'dialogWidth:' + w + '; dialogHeight:' + h + '; center:yes;dialogTop:' + top + '; dialogLeft:' + left);
+        return mypopupWindow;
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        var pay_code = '<?php echo $pay_code ?>';
+        ecr_paycode(pay_code);
+    });
+</script>
+
+<script src="js/jquery-1.8.0.min.js"></script>
+<script src="js/jquery-ui-1.8.23.custom.min.js"></script> 
+<link rel="stylesheet" href="js/css/ui-lightness/jquery-ui-1.8.23.custom.css">
+<!--<script src="js/jquery-ui-1.10.1.custom.min.js"></script>-->
+
+<div id="print_receipt_msg" style="width:50%;" >
+    <center id='Msg_Area'>
+        <p>Payment is not completed.<br><br>Please click RE-SYCHRONIZE button to continue.</p>
+    </center>
+</div>
+<div id="synchronize_msg" style="width:50%;" >
+    <center id='synchronize_msg_Area'>
+        <p>Synchronization Completed!.</p>
+    </center>
+</div>
+
+<script type="text/javascript" src="js/ecr_pmnt.js"></script>
+<?php
+include("./includes/footer.php");
+?>

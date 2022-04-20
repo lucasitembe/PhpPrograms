@@ -1,0 +1,25 @@
+
+[page5 link="http://www.tuotteet.info/website1/wp-content/uploads/2013/05/Glen.jpg"]
+<strong>Antti Inkilä</strong>
+Software Architect[/page5]
+
+[page5 link="http://www.tuotteet.info/website1/wp-content/uploads/2013/05/Glen.jpg"]<strong>Glen Somerville</strong>
+Front-end Developer[/page5]
+
+[page5 link="http://www.tuotteet.info/website1/wp-content/uploads/2013/05/Glen.jpg"]
+<strong>Matti Paalanen</strong>
+Application Developer[/page5]
+
+
+
+
+
+[page5 link="http://www.tuotteet.info/website1/wp-content/uploads/2013/05/Jaakko.jpg"]
+<strong>Jaakko Kyrö</strong>
+Application Developer[/page5]
+
+[page5 link="http://www.tuotteet.info/website1/wp-content/uploads/2013/05/slide-5-166x121.jpg"]Paavo KoskinenApplication Developer[/page5]
+
+[page5 link="http://www.tuotteet.info/website1/wp-content/uploads/2013/05/slide-5-166x121.jpg"]
+<p style="font-weight: bold;">Anniina Paalanen</p>
+Office and Sales Manager[/page5]

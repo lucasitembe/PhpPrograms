@@ -1,0 +1,1 @@
+SELECT Item_ID FROM tbl_pending_purchase_order_items  WHERE pending_purchase_id = '1'<br/>UPDATE tbl_items SET Last_Buy_Price='5650.75' WHERE Item_ID='234'

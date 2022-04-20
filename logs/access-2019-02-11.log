@@ -1,0 +1,645 @@
+
+[2019-02-11 10:14:34]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10087190211</transactionNumber>
+                    <paymentDate>2019-02-11 10:14:34</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16007</paidFor>
+                    <msisdn>255653247262</msisdn>
+                    <currency>TZS</currency>
+                    <amount>1000.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10087190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 10:14:34]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>151</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 10:16:29]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10088190211</transactionNumber>
+                    <paymentDate>2019-02-11 10:16:29</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16007</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>1000.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10088190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 10:16:29]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>153</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 10:21:41]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10089190211</transactionNumber>
+                    <paymentDate>2019-02-11 10:21:41</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16008</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>1500.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10089190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 10:21:41]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>154</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 10:23:57]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10090190211</transactionNumber>
+                    <paymentDate>2019-02-11 10:23:57</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16008</paidFor>
+                    <msisdn>255714554390</msisdn>
+                    <currency>TZS</currency>
+                    <amount>1500.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10090190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 10:23:57]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>155</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 13:43:18]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10091190211</transactionNumber>
+                    <paymentDate>2019-02-11 13:43:18</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16007</paidFor>
+                    <msisdn>255756671838</msisdn>
+                    <currency>TZS</currency>
+                    <amount>1000.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10091190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 13:43:18]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>159</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 13:54:38]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10092190211</transactionNumber>
+                    <paymentDate>2019-02-11 13:54:38</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16007</paidFor>
+                    <msisdn>255653247262</msisdn>
+                    <currency>TZS</currency>
+                    <amount>1000.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10092190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 13:54:38]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>160</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 13:58:56]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10093190211</transactionNumber>
+                    <paymentDate>2019-02-11 13:58:56</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16007</paidFor>
+                    <msisdn>255653247262</msisdn>
+                    <currency>TZS</currency>
+                    <amount>1000.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10093190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 13:58:56]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>161</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 16:09:55]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10094190211</transactionNumber>
+                    <paymentDate>2019-02-11 16:09:55</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16010</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10094190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 16:09:55]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>163</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 16:11:06]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10095190211</transactionNumber>
+                    <paymentDate>2019-02-11 16:11:06</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16010</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10095190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 16:11:06]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>164</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 16:12:41]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10096190211</transactionNumber>
+                    <paymentDate>2019-02-11 16:12:41</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16010</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10096190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 16:12:41]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>165</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 16:15:08]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10097190211</transactionNumber>
+                    <paymentDate>2019-02-11 16:15:08</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16010</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10097190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 16:15:08]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>166</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 16:18:11]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10098190211</transactionNumber>
+                    <paymentDate>2019-02-11 16:18:11</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16010</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10098190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 16:18:11]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>167</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 16:22:32]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10099190211</transactionNumber>
+                    <paymentDate>2019-02-11 16:22:32</paymentDate>
+                    <name>george magere magir</name>
+                    <paidFor>16010</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10099190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 16:22:32]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>168</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 18:09:21]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>1001190211</transactionNumber>
+                    <paymentDate>2019-02-11 18:09:21</paymentDate>
+                    <name>haji m mrisho</name>
+                    <paidFor>16011</paidFor>
+                    <msisdn>255653247262</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH1001190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 18:09:21]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>170</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 18:41:02]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>1002190211</transactionNumber>
+                    <paymentDate>2019-02-11 18:41:02</paymentDate>
+                    <name>haji m mrisho</name>
+                    <paidFor>16011</paidFor>
+                    <msisdn>255713353498</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH1002190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 18:41:02]Response ussdpush:=> 
+[2019-02-11 18:42:17]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>1003190211</transactionNumber>
+                    <paymentDate>2019-02-11 18:42:17</paymentDate>
+                    <name>haji m mrisho</name>
+                    <paidFor>16011</paidFor>
+                    <msisdn>255713353498</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH1003190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 18:42:17]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>171</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 18:45:17]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>1004190211</transactionNumber>
+                    <paymentDate>2019-02-11 18:45:17</paymentDate>
+                    <name>haji m mrisho</name>
+                    <paidFor>16011</paidFor>
+                    <msisdn>255713353498</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH1004190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 18:45:17]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>172</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 18:49:17]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>1005190211</transactionNumber>
+                    <paymentDate>2019-02-11 18:49:17</paymentDate>
+                    <name>haji m mrisho</name>
+                    <paidFor>16011</paidFor>
+                    <msisdn>255713353498</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH1005190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 18:49:17]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>173</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 18:53:41]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>1006190211</transactionNumber>
+                    <paymentDate>2019-02-11 18:53:41</paymentDate>
+                    <name>haji m mrisho</name>
+                    <paidFor>16011</paidFor>
+                    <msisdn>255743354429</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH1006190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 18:53:41]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>174</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 20:16:10]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>1007190211</transactionNumber>
+                    <paymentDate>2019-02-11 20:16:10</paymentDate>
+                    <name>sponsort test auto</name>
+                    <paidFor>16012</paidFor>
+                    <msisdn>255743354429</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH1007190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 20:16:10]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>175</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 20:20:46]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>1008190211</transactionNumber>
+                    <paymentDate>2019-02-11 20:20:46</paymentDate>
+                    <name>sponsort test auto</name>
+                    <paidFor>16012</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH1008190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 20:20:46]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>176</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 21:03:22]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>1009190211</transactionNumber>
+                    <paymentDate>2019-02-11 21:03:22</paymentDate>
+                    <name>sponsort test auto</name>
+                    <paidFor>16012</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH1009190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 21:03:22]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>179</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 21:09:06]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10010190211</transactionNumber>
+                    <paymentDate>2019-02-11 21:09:06</paymentDate>
+                    <name>manjis patient mwanza</name>
+                    <paidFor>16013</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10010190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 21:09:06]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>180</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 21:16:19]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10011190211</transactionNumber>
+                    <paymentDate>2019-02-11 21:16:19</paymentDate>
+                    <name>manjis patient mwanza</name>
+                    <paidFor>16013</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>100.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10011190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 21:16:19]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>181</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 21:28:47]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10012190211</transactionNumber>
+                    <paymentDate>2019-02-11 21:28:47</paymentDate>
+                    <name>waleo leo kutest</name>
+                    <paidFor>16014</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>200.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10012190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 21:28:47]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>182</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 21:42:02]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10013190211</transactionNumber>
+                    <paymentDate>2019-02-11 21:42:02</paymentDate>
+                    <name>waleo leo kutest</name>
+                    <paidFor>16014</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>200.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10013190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 21:42:02]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>183</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>
+[2019-02-11 21:53:22]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10014190211</transactionNumber>
+                    <paymentDate>2019-02-11 21:53:22</paymentDate>
+                    <name>salome  andrew buhuba</name>
+                    <paidFor>16015</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>1000.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10014190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 21:53:22]Response ussdpush:=> 
+[2019-02-11 21:54:00]:=> <epsGateway xmlns="http://www.thehub.co.tz/" version="2.0">
+            <header>
+                <username>888800</username>
+                <password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password>
+                <timestamp>20181228143755</timestamp>
+            </header>
+            <body>
+                <request>
+                    <command>CustomerPaybill</command>
+                    <businessName>Eps App</businessName>
+                    <transactionNumber>10015190211</transactionNumber>
+                    <paymentDate>2019-02-11 21:54:00</paymentDate>
+                    <name>salome  andrew buhuba</name>
+                    <paidFor>16015</paidFor>
+                    <msisdn>255754589784</msisdn>
+                    <currency>TZS</currency>
+                    <amount>1000.00</amount>
+                    <amountType>FLEXIBLE</amountType>
+                    <reference>BUH10015190211</reference>
+                </request>
+            </body>
+        </epsGateway>
+[2019-02-11 21:54:00]Response ussdpush:=> <EpsGateway xmlns:wstxns1="http://www.thehub.co.tz/" wstxns1:version="2.0"><header><username>888800</username><password>CKdStkcNvrj7an/wseH0ku/szdmXB6bhFCt1rhlqO9I=</password><timestamp>20181228143755</timestamp></header><body><response><thirdPartyId>184</thirdPartyId><responseCode>0</responseCode><responseStatus>Accepted Successfully</responseStatus></response></body></EpsGateway>

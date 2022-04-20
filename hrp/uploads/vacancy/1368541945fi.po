@@ -1,0 +1,738 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-16 10:31+0200\n"
+"PO-Revision-Date: 2013-04-16 13:35+0200\n"
+"Last-Translator: Heli Jussila <heli.h.jussila@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ./\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:7
+msgid "Sorry!"
+msgstr "Anteeksi!"
+
+#: ../404.php:8
+msgid "Page Not Found"
+msgstr "Sivua ei löydy"
+
+#: ../404.php:10
+msgid ""
+"The page you are looking for might have been removed, had its name changed, "
+"or is temporarily unavailable."
+msgstr ""
+"Sivu, jota etsit, saattaa olla poistettu, sen nimi saattaa olla muuttunut "
+"tai se voi olla muusta syystä hetkellisesti poissa käytöstä."
+
+#: ../404.php:11
+msgid ""
+"Please try using our search box below to look for information on the "
+"internet."
+msgstr ""
+"Ole hyvä ja kokeile meidän alla olevaa hakutoimintoa etsiäksesi tietoa "
+"internetistä."
+
+#: ../archive.php:5
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Päivittäiset arkistot: <span>%s</span>"
+
+#: ../archive.php:7
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Kuukausittaiset arkistot: <span>%s</span>"
+
+#: ../archive.php:9
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Viikoittaiset arkistot: <span>%s</span>"
+
+#: ../archive.php:11
+msgid "Blog Archives"
+msgstr "Blogi arkistot"
+
+#: ../archive.php:27 ../author.php:38 ../category.php:19 ../index.php:16
+msgid "Posted by"
+msgstr "Kirjoittaja"
+
+#: ../archive.php:55 ../author.php:66 ../category.php:47 ../index.php:44
+msgid "Read more"
+msgstr "Lue lisää"
+
+#: ../archive.php:61 ../category.php:52 ../index.php:50
+msgid "There has been an error."
+msgstr "On tapahtunut virhe."
+
+#: ../archive.php:62 ../category.php:53 ../index.php:51
+msgid "We apologize for any inconvenience, please"
+msgstr "Pahoittelemme häiriötä, ole hyvä ja"
+
+#: ../archive.php:62 ../category.php:53 ../index.php:51
+msgid "return to the home page"
+msgstr "palaa etusivulle"
+
+#: ../archive.php:62 ../category.php:53 ../index.php:51
+msgid "or use the search form below."
+msgstr "tai käytä hakulomaketta alla"
+
+#: ../archive.php:70 ../author.php:78 ../category.php:61 ../index.php:62
+#: ../page-Portfolio1Col.php:64 ../page-Portfolio2Cols.php:70
+#: ../page-Portfolio3Cols.php:69 ../page-Portfolio4Cols.php:70
+msgid "&laquo; Older Entries"
+msgstr "Vanhemmat merkinnät"
+
+#: ../archive.php:73 ../author.php:81 ../category.php:64 ../index.php:65
+#: ../page-Portfolio1Col.php:67 ../page-Portfolio2Cols.php:73
+#: ../page-Portfolio3Cols.php:72 ../page-Portfolio4Cols.php:73
+msgid "Newer Entries &raquo;"
+msgstr "Uudemmat merkinnät"
+
+#: ../author.php:11
+msgid "About:"
+msgstr "Lisätietoa:"
+
+#: ../author.php:21
+msgid "Recent Posts by"
+msgstr "Kirjoittajan viimeiset artikkelit"
+
+#: ../author.php:72
+msgid "No posts by"
+msgstr "Ei artikkeleita kirjoittajalta"
+
+#: ../author.php:72 ../author.php:98
+msgid "yet."
+msgstr "vielä."
+
+#: ../author.php:87
+msgid "Recent Comments by"
+msgstr "Viimeiset kommentit henkilöltä"
+
+#: ../author.php:95
+#, php-format
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: ../author.php:98
+msgid "No comments by"
+msgstr "Ei kommentteja henkilöltä"
+
+#: ../category.php:4
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Kategoria arkistot: %s"
+
+#: ../comments.php:12
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Tämä artikkeli on suojattu salasanalla. Syötä salasana katsoaksesi "
+"kommentteja."
+
+#: ../comments.php:31
+msgid "No Comments Yet."
+msgstr "Ei vielä kommentteja."
+
+#: ../comments.php:34
+msgid "Comments are closed."
+msgstr "Kommentointi on suljettu."
+
+#: ../comments.php:44
+msgid "Leave a comment"
+msgstr "Jätä kommentti."
+
+#: ../comments.php:51
+msgid "You must be"
+msgstr "Sinun täytyy olla"
+
+#: ../comments.php:51
+msgid "logged in"
+msgstr "kirjautunut"
+
+#: ../comments.php:51
+msgid "to post a comment."
+msgstr "jättääksesi kommentin."
+
+#: ../comments.php:58
+msgid "Logged in as"
+msgstr "Kirjautunut käyttäjänä"
+
+#: ../comments.php:58
+msgid "Log out of this account"
+msgstr "Kirjaudu ulos"
+
+#: ../comments.php:58
+msgid "Log out &raquo;"
+msgstr "Kirjaudu ulos &raquo;"
+
+#: ../comments.php:62
+msgid "Name"
+msgstr "Nimi"
+
+#: ../comments.php:62 ../comments.php:64
+msgid "*"
+msgstr "*"
+
+#: ../comments.php:64
+msgid "Email (will not be published)"
+msgstr "Sähköpostiosoite (ei julkaista)"
+
+#: ../comments.php:66
+msgid "Website"
+msgstr "Kotisivu"
+
+#: ../comments.php:72
+msgid "Your comment"
+msgstr "Kommenttisi"
+
+#: ../comments.php:74
+msgid "Submit Comment"
+msgstr "Lähetä kommentti"
+
+#: ../footer.php:13
+msgid "Privacy Policy"
+msgstr "Rekisteriseloste"
+
+#: ../header.php:8
+msgid "Category Archive for &quot;"
+msgstr "Kategoria arkisto &quot;lle"
+
+#: ../header.php:8 ../header.php:10 ../header.php:14
+msgid "&quot; | "
+msgstr ""
+
+#: ../header.php:10
+msgid "Tag Archive for &quot;"
+msgstr "Tagi arkisto &quot;lle"
+
+#: ../header.php:12
+msgid " Archive | "
+msgstr "Arkisto |"
+
+#: ../header.php:14
+msgid "Search for &quot;"
+msgstr "Etsi &quot;lle"
+
+#: ../header.php:18
+msgid "Error 404 Not Found | "
+msgstr "Virhe 404 Ei löydy |"
+
+#: ../header.php:225
+msgid "GO"
+msgstr "MENE"
+
+#: ../page-Portfolio1Col.php:20 ../page-Portfolio2Cols.php:20
+#: ../page-Portfolio3Cols.php:20 ../page-Portfolio4Cols.php:20
+msgid "Not Found"
+msgstr "Ei löydy"
+
+#: ../page-Portfolio1Col.php:22 ../page-Portfolio2Cols.php:22
+#: ../page-Portfolio3Cols.php:22 ../page-Portfolio4Cols.php:22
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr ""
+"Pahoittelut, mutta tuloksia ei löytynyt halutulle arkistolle. Ehkä haku "
+"auttaa löytämään siihen liittyvän artikkelin."
+
+#: ../page-Portfolio1Col.php:39 ../page-Portfolio2Cols.php:46
+#: ../page-Portfolio3Cols.php:45 ../page-Portfolio4Cols.php:46
+msgid "Permanent Link to"
+msgstr "Kestolinkki "
+
+#: ../page-Portfolio1Col.php:44
+msgid "Click Here"
+msgstr "Klikkaa täältä"
+
+#: ../search.php:50
+msgid "No Results"
+msgstr "Ei tuloksia"
+
+#: ../search.php:51
+msgid "Please feel free try again!"
+msgstr "Ole hyvä ja kokeile uudelleen!"
+
+#: ../searchform.php:3 ../sidebar.php:4
+msgid "Search"
+msgstr "Etsi"
+
+#: ../sidebar.php:9
+msgid "Navigation"
+msgstr "Navigaatio"
+
+#: ../sidebar.php:14
+msgid "Archives"
+msgstr "Arkistot"
+
+#: ../sidebar.php:21
+msgid "Meta"
+msgstr "Meta"
+
+#: ../single.php:44
+msgid "&laquo; Previous post"
+msgstr "&laquo; Edellinen artikkeli"
+
+#: ../single.php:47
+msgid "Next Post &raquo;"
+msgstr "Seuraava artikkeli &raquo;"
+
+#: ../tag.php:3
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Tagi arkisto: %s"
+
+#: ../title.php:7
+msgid "Blog"
+msgstr "Blogi"
+
+#: ../admin/options-framework.php:251
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr "Klikkaa OK resetoidaksesi. Teeman asetukset häviävät."
+
+#: ../admin/options-framework.php:281
+msgid "Default options restored."
+msgstr "Oletusasetukset palautettu."
+
+#: ../admin/options-framework.php:328
+msgid "Options saved."
+msgstr "Valinnat tallennettu."
+
+#: ../admin/options-framework.php:376
+msgid "Theme Options"
+msgstr "Teeman valinnat."
+
+#: ../admin/options-medialibrary-uploader.php:26
+msgid "Options Framework Internal Container"
+msgstr ""
+
+#: ../admin/options-medialibrary-uploader.php:128
+msgid "Upload"
+msgstr "Lähetä"
+
+#: ../admin/options-medialibrary-uploader.php:151
+msgid "View File"
+msgstr "Tarkastele tiedostoa"
+
+#: ../admin/options-medialibrary-uploader.php:288
+msgid "Gallery"
+msgstr "Galleria"
+
+#: ../admin/options-medialibrary-uploader.php:288
+msgid "Previously Uploaded"
+msgstr "Aiemmin lähetetyt"
+
+#: ../includes/sidebar-init.php:8
+msgid "Located at the top of pages."
+msgstr "Sijoitettu sivuston yläosaan."
+
+#: ../includes/sidebar-init.php:19
+msgid "Located at the left of the content."
+msgstr "Sijoitettu sisällön vasempaan osaan."
+
+#: ../includes/sidebar-init.php:30
+msgid "Located at the right of the content."
+msgstr "Sijoitettu sisällön oikeaan osaan."
+
+#: ../includes/sidebar-init.php:41
+msgid "Located at the bottom of the content."
+msgstr "Sijoitettu sisällön alaosaan."
+
+#: ../includes/sidebar-init.php:52
+msgid "Located at the right side of pages."
+msgstr "Sijoitettu sivun oikeaan osaan."
+
+#: ../includes/sidebar-init.php:63 ../includes/sidebar-init.php:74
+#: ../includes/sidebar-init.php:85
+msgid "Located at the bottom of pages."
+msgstr "Sijoitettu sivun alaosaan."
+
+#: ../includes/theme-function.php:125
+msgid "Thumbnail"
+msgstr ""
+
+#: ../includes/theme-function.php:146
+msgid "None"
+msgstr "Ei mitään"
+
+#: ../includes/theme-init.php:46
+msgid "Slides"
+msgstr ""
+
+#: ../includes/theme-init.php:47
+msgid "Slide"
+msgstr ""
+
+#: ../includes/theme-init.php:77
+msgid "Portfolio"
+msgstr ""
+
+#: ../includes/theme-init.php:78
+msgid "Porfolio Item"
+msgstr ""
+
+#: ../includes/theme_shortcodes/shortcodes.php:345
+msgid "The URL you entered is not a .mp3 file."
+msgstr "Syöttämäsi URL ei ole .mp3-tiedosto."
+
+#: ../includes/theme_shortcodes/shortcodes.php:412
+msgid "You entered a video URL that isn't compatible with this shortcode."
+msgstr "Syötit video URL:n, joka ei ole yhteensopiva tämän lyhytkoodin kanssa."
+
+#: ../includes/theme_shortcodes/tinymce/dialog.php:23
+msgid "Shortcode Options"
+msgstr "Lyhytkoodivalinnat"
+
+#: ../includes/widgets/my-banners-widget.php:77
+#: ../includes/widgets/my-flickr-widget.php:57
+#: ../includes/widgets/my-popular-posts-widget.php:81
+#: ../includes/widgets/my-post-cycle-widget.php:166
+msgid "Title:"
+msgstr "Otsikko:"
+
+#: ../includes/widgets/my-banners-widget.php:78
+msgid "First banner path:"
+msgstr "Ensimmäisen bannerin polku:"
+
+#: ../includes/widgets/my-banners-widget.php:79
+msgid "First banner Link:"
+msgstr "Ensimmäisen bannerin linkki:"
+
+#: ../includes/widgets/my-banners-widget.php:81
+msgid "Second banner path:"
+msgstr "Toisen bannerin polku:"
+
+#: ../includes/widgets/my-banners-widget.php:82
+msgid "Second banner Link:"
+msgstr "Toisen bannerin linkki:"
+
+#: ../includes/widgets/my-banners-widget.php:84
+msgid "Third banner path:"
+msgstr "Kolmannen bannerin polku:"
+
+#: ../includes/widgets/my-banners-widget.php:85
+msgid "Third banner Link:"
+msgstr "Kolmannen bannerin linkki:"
+
+#: ../includes/widgets/my-banners-widget.php:87
+msgid "Fourth banner path:"
+msgstr "Neljännen bannerin polku:"
+
+#: ../includes/widgets/my-banners-widget.php:88
+msgid "Fourth banner Link:"
+msgstr "Neljännen bannerin linkki:"
+
+#: ../includes/widgets/my-comment-widget.php:6
+#: ../includes/widgets/my-comment-widget.php:7
+msgid "My - Recent Comments"
+msgstr "Minun - Viimeiset kommenttini"
+
+#: ../includes/widgets/my-comment-widget.php:14
+msgid "My Recent Comments"
+msgstr "Viimeiset kommenttini"
+
+#: ../includes/widgets/my-comment-widget.php:43
+msgid "Go to this comment"
+msgstr "Mene tähän kommenttiin"
+
+#: ../includes/widgets/my-flickr-widget.php:59
+msgid "Flickr ID:"
+msgstr ""
+
+#: ../includes/widgets/my-flickr-widget.php:60
+msgid "Images count:"
+msgstr ""
+
+#: ../includes/widgets/my-flickr-widget.php:61
+#: ../includes/widgets/my-popular-posts-widget.php:85
+msgid "Link Text:"
+msgstr "Linkkiteksti"
+
+#: ../includes/widgets/my-popular-posts-widget.php:53
+msgid "Read more &gt;&gt;"
+msgstr "Lue lisää &gt;&gt;"
+
+#: ../includes/widgets/my-popular-posts-widget.php:83
+#: ../includes/widgets/my-post-cycle-widget.php:169
+msgid "Posts per page:"
+msgstr "Artikkeleita per sivu:"
+
+#: ../includes/widgets/my-popular-posts-widget.php:87
+msgid "Link Url:"
+msgstr "Linkin Url:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:74
+msgid "Prev"
+msgstr "Edellinen"
+
+#: ../includes/widgets/my-post-cycle-widget.php:75
+msgid "Next"
+msgstr "Seuraava"
+
+#: ../includes/widgets/my-post-cycle-widget.php:168
+msgid "Limit Text:"
+msgstr "Raja-arvo teksti"
+
+#: ../includes/widgets/my-post-cycle-widget.php:171
+msgid "Show profile link:"
+msgstr "Näytä profiili linkki:"
+
+#: ../includes/widgets/my-posts-type-widget.php:7
+msgid "Show custom posts"
+msgstr "Näytä mukautettu artikkeli"
+
+#: ../includes/widgets/my-posts-type-widget.php:9
+msgid "My - Advanced Cycle"
+msgstr ""
+
+#: ../includes/widgets/my-posts-type-widget.php:147
+msgid "Title"
+msgstr "Otsikko"
+
+#: ../includes/widgets/my-posts-type-widget.php:154
+msgid "Posts type"
+msgstr "Artikkelien tyyppi"
+
+#: ../includes/widgets/my-posts-type-widget.php:174
+msgid "Number of posts to show"
+msgstr "Näytettävien artikkelien määrä"
+
+#: ../includes/widgets/my-posts-type-widget.php:181
+msgid "Sort by"
+msgstr "Lajittele"
+
+#: ../includes/widgets/my-posts-type-widget.php:197
+msgid "Reverse sort order (ascending)"
+msgstr "Käänteinen lajittelujärjestys (nouseva)"
+
+#: ../includes/widgets/my-posts-type-widget.php:203
+msgid "Show number of comments"
+msgstr "Näytä kommenttien lukumäärä"
+
+#: ../includes/widgets/my-posts-type-widget.php:210
+msgid "Show meta"
+msgstr ""
+
+#: ../includes/widgets/my-posts-type-widget.php:216
+msgid "Container class"
+msgstr ""
+
+#: ../includes/widgets/my-posts-type-widget.php:217
+msgid "(default: \"featured_custom_posts\")"
+msgstr "(oletus: \"featured_custom_posts\")"
+
+#: ../includes/widgets/my-posts-type-widget.php:222
+msgid "Post title"
+msgstr "Artikkelin otsikko"
+
+#: ../includes/widgets/my-posts-type-widget.php:226
+msgid "Show post title"
+msgstr "Näytä artikkelin otsikko"
+
+#: ../includes/widgets/my-posts-type-widget.php:232
+msgid ""
+"Date as title <span style=\"font-size:11px; color:#999;\">(\"[mm-dd-yyyy]\")"
+"</span>"
+msgstr ""
+"Päivämäärä otsikkona <span style=\"font-size:11px; color:#999;\">(\"[mm-dd-"
+"yyyy]\")</span>"
+
+#: ../includes/widgets/my-posts-type-widget.php:237
+msgid "Before title"
+msgstr "Ennen otsikkoa"
+
+#: ../includes/widgets/my-posts-type-widget.php:243
+msgid "After title"
+msgstr "Otsikon jälkeen"
+
+#: ../includes/widgets/my-posts-type-widget.php:251
+msgid "Excerpt"
+msgstr "Ote"
+
+#: ../includes/widgets/my-posts-type-widget.php:255
+msgid "Show post excerpt"
+msgstr "Näytä artikkelin ote"
+
+#: ../includes/widgets/my-posts-type-widget.php:260
+msgid "Excerpt length (words):"
+msgstr "Otteen pituus (sanoissa):"
+
+#: ../includes/widgets/my-posts-type-widget.php:267
+msgid "Excerpt as link"
+msgstr "Ote linkkinä"
+
+#: ../includes/widgets/my-posts-type-widget.php:274
+msgid "More link"
+msgstr "Lisää linkki"
+
+#: ../includes/widgets/my-posts-type-widget.php:278
+msgid "Show \"More link\""
+msgstr "Näytä \"Lisää linkki\""
+
+#: ../includes/widgets/my-posts-type-widget.php:284
+#: ../includes/widgets/my-posts-type-widget.php:331
+msgid "Link text"
+msgstr "Linkkiteksti"
+
+#: ../includes/widgets/my-posts-type-widget.php:285
+msgid "(default: \"Read more\")"
+msgstr "(oletus: \"Lue lisää\")"
+
+#: ../includes/widgets/my-posts-type-widget.php:290
+msgid "Link class"
+msgstr "Linkkiluokka"
+
+#: ../includes/widgets/my-posts-type-widget.php:291
+msgid "(default: \"link\")"
+msgstr "(oletus: \"linkki\")"
+
+#: ../includes/widgets/my-posts-type-widget.php:296
+msgid "Thumbnail dimensions"
+msgstr ""
+
+#: ../includes/widgets/my-posts-type-widget.php:301
+msgid "Show post thumbnail"
+msgstr ""
+
+#: ../includes/widgets/my-posts-type-widget.php:317
+msgid "Thumbnail as link"
+msgstr ""
+
+#: ../includes/widgets/my-posts-type-widget.php:322
+msgid "Link to all posts"
+msgstr "Linkki kaikkiin artikkeleihin"
+
+#: ../includes/widgets/my-posts-type-widget.php:326
+msgid "Show global link to all posts"
+msgstr "Näytä globaalilinkki kaikkiin artikkeleihin"
+
+#: ../includes/widgets/my-posts-type-widget.php:332
+msgid "(default: \"View all\")"
+msgstr "(oletus: \"Näytä kaikki\")"
+
+#: ../includes/widgets/my-posts-type-widget.php:337
+msgid "Link URL"
+msgstr "Linkki URL"
+
+#: ../includes/widgets/my-recent-posts.php:71
+msgid "Category Slug:"
+msgstr ""
+
+#: ../includes/widgets/my-requestquote-widget.php:61
+msgid "Text:"
+msgstr "Teksti:"
+
+#: ../includes/widgets/my-requestquote-widget.php:62
+msgid "Button Text:"
+msgstr "Painiketeksti:"
+
+#: ../includes/widgets/my-requestquote-widget.php:63
+msgid "Button URL:"
+msgstr "Painike URL:"
+
+#: ../includes/widgets/my-requestquote-widget.php:64
+msgid "Color"
+msgstr "Väri"
+
+#: ../includes/widgets/my-social-widget.php:6
+msgid "Link to your social networks."
+msgstr "Linkki sosiaaliseen mediaan."
+
+#: ../includes/widgets/my-social-widget.php:7
+msgid "My - Social Networks"
+msgstr "Minun - Sosiaalinen media"
+
+#: ../includes/widgets/my-social-widget.php:114
+msgid "Facebook"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:116
+msgid "Facebook URL:"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:119
+msgid "Facebook label:"
+msgstr "Facebook nimike:"
+
+#: ../includes/widgets/my-social-widget.php:124
+msgid "Twitter"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:125
+msgid "Twitter URL:"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:127
+msgid "Twitter label:"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:132
+msgid "Flickr"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:133
+msgid "Flickr URL:"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:135
+msgid "Flickr label:"
+msgstr "Flickr nimike:"
+
+#: ../includes/widgets/my-social-widget.php:140
+msgid "RSS feed"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:141
+msgid "RSS feed:"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:143
+msgid "RSS label:"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:148
+msgid "Linkedin"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:149
+msgid "Linkedin URL:"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:151
+msgid "Linkedin label:"
+msgstr "Linkedin nimike:"
+
+#: ../includes/widgets/my-social-widget.php:156
+msgid "Delicious"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:157
+msgid "Delicious URL:"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:159
+msgid "Delicious label:"
+msgstr "Delicious nimike:"
+
+#: ../includes/widgets/my-social-widget.php:164
+msgid "Youtube"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:165
+msgid "Youtube URL:"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:167
+msgid "Youtube label:"
+msgstr "Youtube nimike:"
+
+#: ../includes/widgets/my-twitter-widget.php:58
+msgid "Twitter Name:"
+msgstr "Twitter nimi:"
+
+#: ../includes/widgets/my-twitter-widget.php:59
+msgid "Twitts number:"
+msgstr ""

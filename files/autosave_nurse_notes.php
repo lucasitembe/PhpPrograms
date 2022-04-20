@@ -1,0 +1,54 @@
+<?php 
+session_start();
+include("./includes/connection.php");
+$Employee_ID = $_SESSION['userinfo']['Employee_ID'];
+
+$Refugees=$_POST['Refugees'];
+$current_nurse=$Employee_ID;
+$duty_nurse=$_POST['duty_nurse'];
+$duty_ward=$_POST['duty_ward'];
+$Doctor_round=$_POST['Doctor_round'];
+$select_round=$_POST['select_round'];
+$current_inpatient=$_POST['current_inpatient'];
+$received_inpatient=$_POST['received_inpatient'];
+$discharged_inpatient=$_POST['discharged_inpatient'];
+$death_inpatient=$_POST['death_inpatient'];
+$debt_inpatient=$_POST['debt_inpatient'];
+$Abscondees=$_POST['Abscondees'];
+$transferIn=$_POST['transferIn'];
+$transferOut=$_POST['transferOut'];
+$lodgers=$_POST['lodgers'];
+$major_round=$_POST['major_round'];
+$serious_inpatient=$_POST['serious_inpatient'];
+$Ward_Type=$_POST['Ward_Type'];
+$Prisoner=$_POST['Prisoner'];
+
+
+$duty_ID = mysqli_fetch_assoc(mysqli_query($conn, "SELECT duty_ID FROM tbl_nurse_duties WHERE Ward_Type = '$Ward_Type' AND select_round = '$select_round' AND duty_ward = '$duty_ward' AND Process_Status = 'pending' AND DATE(duty_handled) = CURDATE()"))['duty_ID'];
+
+    if($duty_ID > 0){
+        $Insert_notes = mysqli_query($conn, "UPDATE tbl_nurse_duties SET Refugees = '$Refugees', current_nurse = '$current_nurse', duty_nurse = '$duty_nurse', duty_ward = '$duty_ward', Doctor_round = '$Doctor_round', select_round = '$select_round', current_inpatient = '$current_inpatient', received_inpatient = '$received_inpatient', discharged_inpatient = '$discharged_inpatient', death_inpatient= '$death_inpatient', debt_inpatient = '$debt_inpatient', Abscondees = '$Abscondees', transferIn = '$transferIn', transferOut = '$transferOut', lodgers = '$lodgers', major_round = '$major_round', serious_inpatient = '$serious_inpatient', Ward_Type = '$Ward_Type', Prisoner = '$Prisoner' WHERE duty_ID = '$duty_ID'");
+        if($Insert_notes){
+            echo 200;
+        }else{
+            echo 201;
+        }
+    }else{
+        $save_nurse_handler = mysqli_query($conn, "INSERT INTO tbl_nurse_duties (current_nurse,duty_nurse,duty_ward,select_round, Ward_Type, Process_Status) VALUES ('$current_nurse','$duty_nurse','$duty_ward','$select_round', '$Ward_Type', 'pending')");
+        
+        if($save_nurse_handler){
+            $duty_ID = mysqli_insert_id($conn);
+            
+            $Insert_notes = mysqli_query($conn, "UPDATE tbl_nurse_duties SET Refugees = '$Refugees', current_nurse = '$current_nurse', duty_nurse = '$duty_nurse', duty_ward = '$duty_ward', Doctor_round = '$Doctor_round', select_round = '$select_round', current_inpatient = '$current_inpatient', received_inpatient = '$received_inpatient', discharged_inpatient = '$discharged_inpatient', death_inpatient= '$death_inpatient', debt_inpatient = '$debt_inpatient', Abscondees = '$Abscondees', transferIn = '$transferIn', transferOut = '$transferOut', lodgers = '$lodgers', major_round = '$major_round', serious_inpatient = '$serious_inpatient', Ward_Type = '$Ward_Type', Prisoner = '$Prisoner' WHERE duty_ID = '$duty_ID'");
+            if($Insert_notes){
+                echo 200;
+            }else{
+                echo 201;
+            }
+        }
+    }
+    
+
+mysqli_close($conn);
+
+?>

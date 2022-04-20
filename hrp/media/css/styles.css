@@ -1,0 +1,227 @@
+/* 
+    Document   : style
+    Created on : Sep 9, 2011, 2:43:41 PM
+    Author     : Miltone Urassa
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+::selection{ background-color: #E13300; color: white; }
+::moz-selection{ background-color: #E13300; color: white; }
+::webkit-selection{ background-color: #E13300; color: white; }
+
+body, html {
+    background-color: #fff;
+    /* margin: -1px 0px 0px 0px; */
+    height: 100%;
+    font: 13px/20px normal Helvetica, Arial, sans-serif;
+    color: #1F1F1F;
+}
+
+a {
+    color: #003399;
+    background-color: transparent;
+    font-weight: normal;
+}
+
+
+div#header-box, div#header, div#menu-bar{
+    margin: 0px;
+    width: 100%;
+    height: auto;
+}
+
+div#header{
+    height: 60px;
+    /*    border: 2px solid green;*/
+    background-color: #0079AE;
+}
+
+div#logo{
+    float: left;
+}
+
+div#user-info{
+    background-color: transparent;
+    margin: 5px 40px 0 0;
+    float: right;    
+}
+
+
+div#user-info span.user,div#user-info span.message, div#user-info span.logout {
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 18px;
+    margin-right: 5px;
+}
+
+div#user-info span.user a,div#user-info span.message a, div#user-info span.logout a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+div#user-info span.user a:hover,div#user-info span.message a:hover, div#user-info span.logout a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+    /*    background-color: #D0D0D0;*/
+}
+
+div#menu-bar{
+    border-top: 0px solid #666D73;
+    border-bottom: 1px solid #000;
+    /*    background-color: #666D73;*/
+    /* background-image: url("../../images/selected-right-sub.png"); */
+    /*    height: 30px;*/
+}
+
+div#module-nav{
+    float: left;
+   width: auto;
+    margin: 3px 0 0 40px;
+    /*    border: 1px solid black;*/
+}
+
+div#date{
+    float: right;
+    color: #fff;
+    width: auto;
+    text-align: right;
+    margin: 5px 40px 0 0;
+    font-weight: bold;
+}
+
+div#wrapper{
+    margin: 0 40px 0 40px;
+    min-height: 80%;
+    height: auto;
+    padding: 0px 10px 20px 10px;
+    border-left: 1px solid #D0D0D0;
+    border-right: 1px solid #D0D0D0;
+}
+
+/* for Internet Explorer */
+/*\*/
+* html #wrapper {
+    height: 80%;
+}
+/**/
+
+form{
+    padding: 20px 0px 0px 20px;
+    width: 700px;
+}
+
+form div.form-display div.form-title{
+    height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div#footer{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:40px;
+    width:100%;
+    color: white;
+    background-color: #0079AE;
+}
+
+/* IE 6 */
+* html div#footer {
+    position:absolute;
+    top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+
+div#footer p#copyright{
+    margin-left: 40px;
+    float: left;
+}
+
+div#footer p#developers{
+    margin-right: 40px;
+    float: right;
+}
+
+div#footer p span{
+    font-style: italic;
+}
+
+div#footer p a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+div#footer p a:hover{
+    color: #999;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+div#content-button ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+div#content-button ul li{
+    float: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+div#content-button ul li a{
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 0px 8px 0px 8px;
+    color: #fff;
+    border: 1px solid black;
+    font-weight: bold;
+    display: block;
+    font-size: 12px/18px;
+    /*    background-color: #9C0F2F;*/
+    background: -moz-linear-gradient(top,#126784,#131616);
+    background: -webkit-gradient(linear,left top,left bottom,from(#126784),to(#131616));
+    /*    background: -moz-linear-gradient(top,white,#BBBBBB);*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#126784',endColorstr='#131616');
+}
+
+.clear{
+    clear: both;
+}
+/* Module home page */
+div#box{
+    font-family: Arial;
+    width: 750px;
+    margin: 30px auto;
+/*    border: 1px solid;*/
+}
+
+div#box div.link-box{
+    width: 45%;
+    height: 120px;
+    margin-right: 3%;
+    float: left;
+}
+
+div#box div.link-box a{
+    color: #131616;
+    font-weight: bold;
+}
+
+div#box div.link-box p{
+    margin-top: 5px;
+    font-size: 16px;
+    color: #666;
+    width: 85%;
+    text-align: justify;
+}

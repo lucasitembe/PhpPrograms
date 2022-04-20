@@ -1,0 +1,7 @@
+ALTER TABLE `tbl_system_configuration` ADD `Allow_Direct_Departmental_Payments_Auto_Billing` VARCHAR(5) NOT NULL DEFAULT 'no' AFTER `Dispense_Credit_Patients_after_24_hrs`;
+
+ALTER TABLE `tbl_system_configuration` ADD `Display_Cash_Bill_Button_On_Inpatient_Departmental_Payments` VARCHAR(5) NOT NULL DEFAULT 'no' AFTER `Allow_Direct_Departmental_Payments_Auto_Billing`;
+
+ALTER TABLE `tbl_patient_payments` ADD `Hospital_Ward_ID` INT NULL DEFAULT NULL ;
+
+ALTER TABLE `tbl_patient_payments`  ADD foreign key(`Hospital_Ward_ID`) references tbl_hospital_ward(`Hospital_Ward_ID`);

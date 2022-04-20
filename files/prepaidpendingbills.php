@@ -1,0 +1,193 @@
+<?php
+    include("./includes/header.php");
+    include("./includes/connection.php");
+    
+    if(!isset($_SESSION['userinfo'])){
+        @session_destroy();
+        header("Location: ../index.php?InvalidPrivilege=yes");
+    }
+    
+    if(isset($_SESSION['userinfo'])){
+        if(isset($_SESSION['userinfo']['Patients_Billing_Works'])){
+            if($_SESSION['userinfo']['Patients_Billing_Works'] != 'yes'){
+                header("Location: ./index.php?InvalidPrivilege=yes");
+            }
+        }else{
+            header("Location: ./index.php?InvalidPrivilege=yes");
+        }
+    }else{
+        @session_destroy();
+        header("Location: ../index.php?InvalidPrivilege=yes");
+    }
+    
+    echo "<a href='./patientbillingwork.php?PatientsBillingWorks=PatientsBillingWorks' class='art-button-green'>BACK</a>";
+?>
+<br/><br/>
+<style>
+    table,tr,td{
+        border-collapse:collapse !important;
+        border:none !important;
+    }
+    #sss:hover{
+        background-color:#eeeeee;
+        cursor:pointer;
+    }
+</style>
+<fieldset>
+    <center>
+    <table width="70%">
+        <tr>
+            <td width="30%">
+                <input type="text" name="Patient_Name" id="Patient_Name" placeholder="~~~ ~~ Patient Name ~~ ~~~" autocomplete="off" style="text-align: center;" onkeypress="Search_Patient('Patient_Name')" oninput="Search_Patient('Patient_Name')">
+            </td>
+            <td width="30%">
+                <input type="text" name="Patient_Number" id="Patient_Number" placeholder="~~~ ~~ Patient Number ~~ ~~~" autocomplete="off" style="text-align: center;" onkeypress="Search_Patient('Patient_Number')" oninput="Search_Patient('Patient_Number')">
+            </td>
+            <td width="10%" style="text-align: right;">Sponsor Name</td>
+            <td>
+                <select id="Sponsor_ID" name="Sponsor_ID" onchange="Filter_Patient()">
+                    <option value="0">All</option>
+            <?php
+                $select = mysqli_query($conn,"select Guarantor_Name, Sponsor_ID from tbl_sponsor") or die(mysqli_error($conn));
+                $num = mysqli_num_rows($select);
+                if($num > 0){
+                    while ($data = mysqli_fetch_array($select)) {
+            ?>
+                        <option value="<?php echo $data['Sponsor_ID']; ?>"><?php echo $data['Guarantor_Name']; ?></option>
+            <?php
+                    }
+                }
+            ?>
+                </select>
+            </td>
+        </tr>
+    </table>
+    </center>
+</fieldset>
+<fieldset style="overflow-y: scroll; height: 400px;" id="Patient_Area">
+    <legend align="left"><b>OUTPATIENT PENDING BILLS</b></legend>
+    <table width = "100%">
+<?php
+    $Title = '<tr><td colspan="7"><hr></td></tr>
+                <tr>
+                    <td width="5%"><b>SN</b></td>
+                    <td><b>PATIENT NAME</b></td>
+                    <td width="14%"><b>PATIENT NUMBER</b></td>
+                    <td width="14%"><b>SPONSOR NAME</b></td>
+                    <td width="15%"><b>PATIENT AGE</b></td>
+                    <td width="9%"><b>GENDER</b></td>
+                    <td width="12%"><b>MEMBER NUMBER</b></td>
+                </tr>
+                <tr><td colspan="7"><hr></td></tr>';
+
+    $select = mysqli_query($conn,"select pr.Patient_Name, pr.Date_Of_Birth, pr.Gender, pr.Registration_ID, pr.Phone_Number, pr.Member_Number, sp.Guarantor_Name, pd.Prepaid_ID
+                            from tbl_patient_registration pr, tbl_sponsor sp, tbl_prepaid_details pd,tbl_patient_bill pb where
+                            ((pd.Registration_ID = pr.Registration_ID and pd.Status = 'pending') or (sp.payment_method='credit' and pd.Registration_ID = pr.Registration_ID)) and
+                            pr.Registration_ID=pb.Registration_ID and
+                            pr.Sponsor_ID = sp.Sponsor_ID GROUP BY pr.Registration_ID order by pr.Patient_Name ASC limit 20") or die(mysqli_error($conn));
+    $num = mysqli_num_rows($select);
+    if($num > 0){
+        while ($data = mysqli_fetch_array($select)) {
+            $Registration_ID=$data['Registration_ID'];
+            $sql_select_checkin_id="SELECT Check_In_ID FROM tbl_check_in WHERE Registration_ID='$Registration_ID' ORDER BY Check_In_ID DESC LIMIT 1";
+                                    $sql_select_checkin_id_result=mysqli_query($conn,$sql_select_checkin_id) or die(mysqli_error($conn));
+                                    $rows_checkin=mysqli_fetch_assoc($sql_select_checkin_id_result);
+                                    $Check_In_ID=$rows_checkin['Check_In_ID'];
+                          
+            $link = '<a href="pendingbill.php?Registration_ID='.$data['Registration_ID'].'&Prepaid_ID='.$data['Prepaid_ID'].'&PostPaidRevenueCenter=PostPaidRevenueCenterThisForm&Check_In_ID='.$Check_In_ID.'" style="text-decoration:none;">';
+            if($temp%20 == 0){ echo $Title; }
+
+            //Calculate age
+            $date1 = new DateTime($Today);
+            $date2 = new DateTime($data['Date_Of_Birth']);
+            $diff = $date1 -> diff($date2);
+            $age = $diff->y." Years, ";
+            $age .= $diff->m." Months, ";
+            $age .= $diff->d." Days";
+?>
+            <tr id="sss">
+                <td><?php echo $link.(++$temp); ?></a></td>
+                <td><?php echo $link.ucwords(strtolower($data['Patient_Name'])); ?></td>
+                <td><?php echo $link.$data['Registration_ID']; ?></td>
+                <td><?php echo $link.$data['Guarantor_Name']; ?></td>
+                <td><?php echo $link.$age; ?></td>
+                <td><?php echo $link.$data['Gender']; ?></td>
+                <td><?php echo $link.$data['Member_Number']; ?></td>
+            </tr>
+<?php
+        }
+    }else{
+        echo $Title;
+    }
+?>
+    </table>
+</fieldset>
+
+<script type="text/javascript">
+    function Search_Patient(parameter){
+        var Patient_Number = document.getElementById("Patient_Number").value;
+        var Patient_Name = document.getElementById("Patient_Name").value;
+        var Sponsor_ID = document.getElementById("Sponsor_ID").value;
+        var Check_In_ID = '<?= $Check_In_ID ?>';
+        var Section = '<?php echo $Section; ?>';
+
+        if(parameter == 'Patient_Name'){
+            document.getElementById("Patient_Number").value = '';
+        }else if(parameter == 'Patient_Number'){
+            document.getElementById("Patient_Name").value = '';
+            document.getElementById("Sponsor_ID").value = 0;
+            Sponsor_ID = 0;
+        }
+
+        if (window.XMLHttpRequest) {
+            myObjectSearch = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            myObjectSearch = new ActiveXObject('Micrsoft.XMLHTTP');
+            myObjectSearch.overrideMimeType('text/xml');
+        }
+
+        myObjectSearch.onreadystatechange = function () {
+            dataCheck = myObjectSearch.responseText;
+            if (myObjectSearch.readyState == 4) {
+                document.getElementById("Patient_Area").innerHTML = dataCheck;
+            }
+        }; //specify name of function that will handle server response........
+
+        if(parameter == 'Patient_Name'){
+            myObjectSearch.open('GET', 'Pre_Paid_Pending_List_Search_Patients.php?Sponsor_ID='+Sponsor_ID+'&Patient_Name='+Patient_Name+'&Section='+Section+'&Check_In_ID='+Check_In_ID, true);            
+        }else if(parameter == 'Patient_Number'){
+            myObjectSearch.open('GET', 'Pre_Paid_Pending_List_Search_Patients.php?Sponsor_ID='+Sponsor_ID+'&Patient_Number='+Patient_Number+'&Section='+Section+'&Check_In_ID='+Check_In_ID, true);
+        }
+        myObjectSearch.send();
+    }
+</script>
+
+<script type="text/javascript">
+    function Filter_Patient(){
+        var Sponsor_ID = document.getElementById("Sponsor_ID").value;
+        var Section = '<?php echo $Section; ?>';
+        var Check_In_ID = '<?= $Check_In_ID ?>';
+        var Patient_Number = document.getElementById("Patient_Number").value;
+        var Patient_Name = document.getElementById("Patient_Name").value;
+
+        if (window.XMLHttpRequest) {
+            myObjectPr = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            myObjectPr = new ActiveXObject('Micrsoft.XMLHTTP');
+            myObjectPr.overrideMimeType('text/xml');
+        }
+
+        myObjectPr.onreadystatechange = function () {
+            dataPr = myObjectPr.responseText;
+            if (myObjectPr.readyState == 4) {
+                document.getElementById("Patient_Area").innerHTML = dataPr;
+            }
+        }; //specify name of function that will handle server response........
+
+        myObjectPr.open('GET', 'Pre_Paid_Pending_List_Search_Patients.php?Sponsor_ID='+Sponsor_ID+'&Section='+Section+'&Patient_Number='+Patient_Number+'&Patient_Name='+Patient_Name+'&Check_In_ID='+Check_In_ID, true);            
+        myObjectPr.send();
+    }
+</script>
+<?php
+    include("./includes/footer.php");
+?>

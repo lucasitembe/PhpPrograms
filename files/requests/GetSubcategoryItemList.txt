@@ -1,0 +1,29 @@
+<?php
+$subCat='';
+
+if(isset($_GET['subId'])){
+  $subCat=$_GET['subId'];
+}
+$select_items= "SELECT * FROM tbl_items isc
+				WHERE 
+				isc.tbl_item_subcategory = '$subCat' AND 
+				isc.Consultation_Type = 'Radiology'
+			   ";
+						
+						$select_items_qry = mysql_query($select_items) or die(mysql_error());
+						$count = mysql_num_rows($select_items_qry);
+   echo '<table style="background-color:white;padding:20px 0 20px 0;" border="0" >';
+	
+	echo '<tr style="font-weight:bold;font-size:12px;" >';	
+		echo '<td style="width:3%;">SN</td>';	
+		echo '<td>TEST NAME</td>';	
+		echo '<td>&nbps;</td>';	
+	echo '</tr>';
+    $sn=1;
+   while($row=mysql_fetch_array(select_items_qry)){
+      echo '<tr>';	
+		echo '<td style="width:3%;">'.$sn.'</td>';	
+		echo '<td>'.$row['Product_Name'].'</td>';	
+		echo '<td><button type="button" onclick="manageParamenter(\'\')"></td>';	
+	  echo '</tr>';
+   }	

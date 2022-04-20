@@ -1,0 +1,47 @@
+1. patient once inpatient, all opd items go to billing mode? check na duniz also - DONE
+
+2. inpatient CASH items are processed as credit na inpatient is given a bill during check out. so allow them to receive anything ordered na tengeneza bill ya mgonjw. siku ya kutoka hadi alipe ndio ataweza kucheck out... DONE
+
+3. outpatients hawatokei lab 
+
+4. inpatients hawatokei radiology DONE
+
+5. the button "Done" muhimu after orders in IPD page..some vipopuz have no 'dones'..DONE
+
+6. in "inpatient clinical notes", doctor written information/orders etc remain until when patient is discharged! doctor allows signals discharge to nurses who will reveiew bill before they checkout a patient!
+
+7. 
+
+
+May 25th 2015
+1. Can we use labels on items when dr is ordering items? DONE
+2. In pharmacy, after removing item, page is not refreshed to allow user to re-add item back DONE on the list. user must hard reboot the page to see menu ya items re-adding!
+
+
+NURSING INPATIENT
+1. Blood pressure haifanyi sawa. hairecord number/number...diastolic 200/ systolic 90
+2. Should allow user to remove items maana nurse kan kosea..
+3. no adding blank infor
+4. back buttons takes user back to drs page...DONE
+
+INPATIENT DRS
+1. nurse reports dont filter by date/ time  - 
+2. back pages za nursring shld come back to dr inpatient page as it is now - DONE
+
+IPD DRS
+LAB RESULTS NOT WORKING PROPERLY - JOHANNES
+BACK BUTTONS ZA NURSING REPORTS GOING BACK TO NURSING BADALAYA DRS PAGE - DONE
+
+ADMISSION WORKS
+1. Flag ya admitted patients is wrong
+2. Wards na beds should in category/ sub category/ then item format. KH uses Wards# that have room#s that have numbers of beds. (e.g. Ward 1, Room 2, Bed 4)
+3. "Baby Care Chart" - Johannes afanye hii form kesho!
+
+MUST DO NOW
+1. IPD PATIENT FILE
+2. IPD BILLING. DO WE GET ALL OUR MONIES? WHERE IS BILL ZA IPD PATIENTS?
+3. IPD DISCHARGING. ONLY IF BILLING IMEKUWA SORTED NDIO IKUBALI
+4. CONSIDER DEPOSITS ZA IPD PAYMENTS. IF PAID ZIWE RECOGNIZED
+
+
+Zamchimbo2015#
